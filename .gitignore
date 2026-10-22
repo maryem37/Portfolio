@@ -1,3 +1,5 @@
-videos/
+videos/*
+!videos/agriment-demo.mp4
+!videos/vortex-demo.mp4
 /index copy.html
 /index copy_fixed.html
