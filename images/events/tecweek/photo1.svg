@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="tec-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1226"/>
+      <stop offset="50%" stop-color="#0f214d"/>
+      <stop offset="100%" stop-color="#1e143b"/>
+    </linearGradient>
+    <linearGradient id="tec-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="gold-badge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="380" fill="url(#tec-bg)"/>
+  <circle cx="500" cy="80" r="140" fill="#38bdf8" opacity="0.08" filter="blur(40px)"/>
+  <circle cx="100" cy="300" r="160" fill="#818cf8" opacity="0.1" filter="blur(40px)"/>
+  
+  <g transform="translate(300, 150)" text-anchor="middle">
+    <!-- Icon circle -->
+    <circle r="46" fill="rgba(56, 189, 248, 0.12)" stroke="url(#tec-grad)" stroke-width="2"/>
+    <text y="14" font-size="38" text-anchor="middle">🏆</text>
+    
+    <text y="78" fill="#ffffff" font-family="'Onest', 'Segoe UI', sans-serif" font-weight="800" font-size="22" letter-spacing="1">TEC.WEEK 2.0 &amp; 3.0</text>
+    <text y="104" fill="#94a3b8" font-family="'Onest', 'Segoe UI', sans-serif" font-weight="600" font-size="13" letter-spacing="2">TUNISIAN ENGINEERING CONGRESS</text>
+  </g>
+  
+  <!-- Badge -->
+  <g transform="translate(300, 290)">
+    <rect x="-110" y="-16" width="220" height="32" rx="16" fill="rgba(251, 191, 36, 0.15)" stroke="url(#gold-badge)" stroke-width="1.2"/>
+    <text y="5" fill="#fde68a" font-family="'Onest', 'Segoe UI', sans-serif" font-weight="700" font-size="12" text-anchor="middle" letter-spacing="0.5">🥇 1ST PLACE CHALLENGER</text>
+  </g>
+</svg>
