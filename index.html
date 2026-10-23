@@ -3512,6 +3512,13 @@
               <input type="text" id="wa-subject" class="wa-input" placeholder="What is this about?" required>
             </div>
             <div class="wa-field">
+              <label class="wa-label" for="contact-method"><i class="ri-send-plane-line"></i> I prefer to contact you by *</label>
+              <select id="contact-method" class="wa-input wa-select" required>
+                <option value="whatsapp">WhatsApp (+216 27 168 075)</option>
+                <option value="email">Email (mariem.kbaier@enis.tn)</option>
+              </select>
+            </div>
+            <div class="wa-field">
               <label class="wa-label" for="wa-brief"><i class="ri-chat-3-line"></i> Message *</label>
               <textarea id="wa-brief" class="wa-input wa-textarea" placeholder="Write your message here..." required></textarea>
             </div>
@@ -4197,11 +4204,17 @@
       const email = document.getElementById("wa-email").value.trim();
       const subject = document.getElementById("wa-subject").value.trim();
       const brief = document.getElementById("wa-brief").value.trim();
+      const method = document.getElementById("contact-method").value;
 
       const message = `Hello Mariem,\n\nMy name is ${name}.\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${brief}`;
-      const phone = "21627168075"; // Direct contact
-      const waURL = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-      window.open(waURL, "_blank");
+      if (method === "email") {
+        const mailtoURL = `mailto:mariem.kbaier@enis.tn?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+        window.location.href = mailtoURL;
+      } else {
+        const phone = "21627168075"; // Direct WhatsApp contact
+        const waURL = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+        window.open(waURL, "_blank");
+      }
     }
 
     // ----------------------------------------------------
