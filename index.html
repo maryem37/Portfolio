@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Mariem Kbaier — AI & MLOps Engineer</title>
+  <title>Mariem Kbaier — AI & Data Engineer</title>
   <meta name="description"
     content="Portfolio of Mariem Kbaier — Final-year Computer Engineering student at ENIS specializing in Multi-Agent LLM architectures (LangGraph), quantitative RAG pipelines (RAGAS), and cloud microservices. Open to PFE Internship 2027.">
 
@@ -1295,12 +1295,12 @@
 
 
     /* ==================== 4. PROJECTS SHOWCASE ==================== */
-    .video-crown-dual {
+    .video-catalog-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      grid-auto-rows: 560px;
-      gap: 1.75rem;
-      margin-bottom: 3rem;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 340px));
+      grid-auto-rows: 460px;
+      gap: 1.65rem;
+      justify-content: center;
     }
 
     .project-filters {
@@ -1309,6 +1309,10 @@
       justify-content: center;
       gap: 0.6rem;
       margin: 1.5rem 0 2.25rem;
+    }
+
+    @media (max-width: 600px) {
+      .video-catalog-grid { grid-auto-rows: 520px; }
     }
 
     .project-filter-btn {
@@ -1330,24 +1334,23 @@
       box-shadow: 0 6px 18px rgba(59, 130, 246, .24);
     }
     .project-filter-hidden { display: none !important; }
-    .video-crown-dual.project-filter-empty { display: none; }
 
     .crown-card {
-      background: radial-gradient(120% 90% at 50% 0%, rgba(59, 130, 246, 0.12) 0%, #101014 65%);
-      border: 1.5px solid rgba(59, 130, 246, 0.45);
-      border-radius: var(--r-xl);
-      padding: clamp(1.75rem, 3.5vw, 2.5rem);
+      background: var(--bg-surface);
+      border: 1px solid #3b82f6;
+      border-radius: var(--r-lg);
+      padding: 1.5rem;
       display: flex;
       flex-direction: column;
       position: relative;
       overflow: hidden;
-      box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.9), 0 0 35px rgba(59, 130, 246, 0.12);
+      box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.45), 0 0 20px rgba(59, 130, 246, 0.08);
       transition: transform var(--dur-2) var(--ease-smooth), border-color var(--dur-2) ease;
     }
 
     .crown-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--accent-gold);
+      transform: translateY(-5px);
+      border-color: #60a5fa;
     }
 
     .crown-badge {
@@ -1380,19 +1383,19 @@
 
     .crown-title {
       font-family: var(--font-display);
-      font-size: clamp(1.4rem, 2vw, 1.85rem);
+      font-size: 1.25rem;
       font-weight: 800;
       color: #FFFFFF;
       line-height: 1.2;
-      margin-bottom: 0.85rem;
+      margin-bottom: 0.65rem;
     }
 
     .crown-desc {
       color: var(--text-secondary);
       font-size: var(--fs-sm);
-      line-height: 1.65;
-      margin-bottom: 1.5rem;
-      flex-grow: 1;
+      line-height: 1.55;
+      margin-bottom: 0.85rem;
+      flex-grow: 0;
     }
 
     .crown-metrics {
@@ -1445,15 +1448,6 @@
       box-shadow: 0 10px 24px rgba(59, 130, 246, 0.4);
     }
 
-    /* Projects Catalog Grid */
-    .video-catalog-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      grid-auto-rows: 560px;
-      gap: 1.65rem;
-    }
-
-    .video-crown-dual .crown-card,
     .video-catalog-grid .v-card { height: 100%; }
 
     .v-card {
@@ -1524,15 +1518,15 @@
       color: var(--text-muted);
       font-size: var(--fs-sm);
       line-height: 1.55;
-      margin-bottom: 1.25rem;
-      flex-grow: 1;
+      margin-bottom: 0.8rem;
+      flex-grow: 0;
     }
 
     .v-card__tags {
       display: flex;
       flex-wrap: wrap;
       gap: 0.4rem;
-      margin-bottom: 1.25rem;
+      margin-bottom: 0.8rem;
     }
 
     .v-card__tags span {
@@ -1562,7 +1556,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 0.75rem;
-      margin-top: auto;
+      margin-top: 0.6rem;
       padding-top: 0.85rem;
       border-top: 1px solid var(--border-subtle);
     }
@@ -2530,7 +2524,7 @@
     }
     [data-theme="light"] .projects-section .crown-card {
       background: linear-gradient(145deg, #ffffff 0%, #f3f7fd 100%);
-      border-color: rgba(37, 99, 235, .28);
+      border-color: rgba(37, 99, 235, .72);
       box-shadow: 0 18px 42px rgba(30, 55, 90, .12);
     }
     [data-theme="light"] .projects-section .crown-card:hover {
@@ -2611,7 +2605,7 @@
 
   <!-- Persistent Corner Hashtags -->
   <div class="fixed-footer-tag tag-left">#MARIEM_KBAIER</div>
-  <div class="fixed-footer-tag tag-right">#AI_MLOPS_ENGINEER</div>
+  <div class="fixed-footer-tag tag-right">#AI_DATA_ENGINEER</div>
 
   <!-- ==================== HEADER & NAVBAR ==================== -->
   <header class="header" id="header">
@@ -2800,7 +2794,7 @@
               </div>
             </div>
 
-            <!-- Card 04: Cloud & MLOps -->
+            <!-- Card 04: Cloud & Data -->
             <div class="sw-dash-card">
               <div class="sw-dash__top">
                 <div class="sw-dash__icon">
@@ -2808,7 +2802,7 @@
                 </div>
                 <span class="sw-dash__cat">04 / DevOps</span>
               </div>
-              <h3 class="sw-dash__title">Cloud &amp; MLOps Deployment</h3>
+              <h3 class="sw-dash__title">Cloud &amp; Data Deployment</h3>
               <p class="sw-dash__desc">Architecting serverless AWS telemetry (IoT Core, Lambdas, DynamoDB) and containerized Docker pipelines with CI/CD.</p>
               <div class="sw-dash__chips">
                 <span><i class="ri-ship-line" aria-hidden="true"></i> Docker</span>
@@ -2833,7 +2827,7 @@
             <i class="ri-timeline-view"></i> <span data-i18n="sec.journeyLabel">Background</span>
           </div>
           <h2 class="section-title" data-i18n="sec.journeyTitle">ACADEMIC &amp; PROFESSIONAL JOURNEY</h2>
-          <p class="section-subtitle" data-i18n="sec.journeySub">Rigorous preparatory foundation followed by specialized engineering in AI &amp; MLOps</p>
+          <p class="section-subtitle" data-i18n="sec.journeySub">Rigorous preparatory foundation followed by specialized engineering in AI &amp; Data</p>
         </div>
       </div>
 
@@ -2858,10 +2852,10 @@
           <div class="tl-item">
             <div class="tl-date">02 &middot; 2024 — 2027</div>
             <strong>Computer Engineering Degree &middot; National Engineering School of Sfax (ENIS)</strong>
-            <p>National Engineering School of Sfax (ENIS). Specialization in AI, MLOps &amp; Distributed Systems.</p>
+            <p>National Engineering School of Sfax (ENIS). Specialization in AI, Data &amp; Distributed Systems.</p>
             <div class="tl-chips">
               <span class="chip-active">ENIS</span>
-              <span class="chip-active">AI &amp; MLOps</span>
+              <span class="chip-active">AI &amp; Data</span>
               <span class="chip-active">Distributed Systems</span>
             </div>
           </div>
@@ -2879,11 +2873,11 @@
             </div>
           </div>
 
-          <!-- 04: AI, Data & MLOps Intern @ Talan -->
+          <!-- 04: AI & Data Intern @ Talan -->
           <div class="tl-item">
             <div class="tl-badge">👑 2ND PLACE / 120+ TALAN SUMMER CAMP</div>
             <div class="tl-date">04 &middot; Jul — Aug 2026</div>
-            <strong>AI, Data &amp; MLOps Intern @ Talan</strong>
+            <strong>AI &amp; Data Intern @ Talan</strong>
             <p>Built AgriMent, an agricultural decision-support platform combining multi-agent AI, regulatory RAG, and satellite data.</p>
             <div class="tl-chips">
               <span class="chip-active">Talan Summer Camp</span>
@@ -2918,84 +2912,53 @@
           <button class="project-filter-btn" type="button" data-project-filter="cybersecurity" aria-pressed="false">Cybersecurity</button>
         </div>
 
-        <!-- Dual Crown Jewels Spotlight -->
-        <div class="video-crown-dual">
+        <!-- Projects Catalog Grid -->
+        <div class="video-catalog-grid" id="project-catalog">
 
           <!-- Crown Jewel 1: AgriGuide / AgriMent -->
-          <div class="crown-card" data-project-domains="ai data">
-            <div class="crown-badge gold-badge">👑 2ND PLACE · TALAN SUMMER CAMP (120+ PARTICIPANTS)</div>
-            <div class="crown-brand">Talan &amp; ENIS · AgriGuide / AgriMent</div>
-            <h3 class="crown-title">AgriGuide — Multi-Agent Agricultural Decision-Support Platform</h3>
-            <p class="crown-desc">A multi-agent agricultural decision platform for parcel analysis, crop recommendations, satellite monitoring, regulatory guidance, and farm business planning.</p>
-            <div class="v-card__tags crown-techs" aria-label="Technologies">
+          <div class="v-card" data-project-domains="ai data" onclick="openProjectModal(0)">
+            <div class="v-card__top">
+              <span class="v-cat-pill">Agriculture · Multi-Agent AI</span>
+              <span class="v-brand-pill">Talan &amp; ENIS</span>
+            </div>
+            <h4 class="v-card__title">AgriGuide — Multi-Agent Agricultural Decision-Support Platform</h4>
+            <p class="v-card__sub">A multi-agent agricultural decision platform for parcel analysis, crop recommendations, satellite monitoring, regulatory guidance, and farm business planning.</p>
+            <div class="v-card__tags" aria-label="Technologies">
               <span><i class="ri-node-tree" aria-hidden="true"></i> LangGraph</span>
               <span><i class="ri-flashlight-line" aria-hidden="true"></i> FastAPI</span>
               <span><i class="ri-brain-line" aria-hidden="true"></i> Mistral AI</span>
               <span><i class="ri-database-2-line" aria-hidden="true"></i> Qdrant</span>
               <span><i class="ri-map-2-line" aria-hidden="true"></i> PostGIS</span>
             </div>
-            <div class="crown-metrics">
-              <div class="crown-metric-item">
-                <b>0.941</b>
-                <span>Context Precision (RAGAS)</span>
-              </div>
-              <div class="crown-metric-item">
-                <b>r = 0.980</b>
-                <span>Human-AI Alignment</span>
-              </div>
-              <div class="crown-metric-item">
-                <b>80.3%</b>
-                <span>TempCNN Crop Accuracy</span>
-              </div>
-              <div class="crown-metric-item">
-                <b>0.0%</b>
-                <span>Guardrail False Positives</span>
-              </div>
+            <div class="v-card__actions">
+              <span class="v-card__link"><i class="ri-file-text-line" aria-hidden="true"></i> Project Details &amp; Demo</span>
+              <a href="https://github.com/maryem37/AgriGuide_Project" target="_blank" rel="noopener noreferrer" class="v-card__link" onclick="event.stopPropagation()">
+                <i class="ri-github-line" aria-hidden="true"></i> Repository
+              </a>
             </div>
-            <button class="btn-video-launch" onclick="openProjectModal(0)">
-              <i class="ri-file-text-line"></i> View Project Report &amp; Demo
-            </button>
           </div>
 
           <!-- Crown Jewel 2: VORTEX -->
-          <div class="crown-card" data-project-domains="ai qa devops">
-            <div class="crown-badge gold-badge">⚡ AUTONOMOUS SELF-REPAIRING PIPELINE</div>
-            <div class="crown-brand">VORTEX · LangGraph Architecture</div>
-            <h3 class="crown-title">VORTEX — Multi-Agent Test Automation System with LangGraph</h3>
-            <p class="crown-desc">A LangGraph workflow that converts user stories into Gherkin, validates scenarios, generates and runs tests, analyzes coverage, and attempts to repair failures.</p>
-            <div class="v-card__tags crown-techs" aria-label="Technologies">
+          <div class="v-card" data-project-domains="ai qa devops" onclick="openProjectModal(1)">
+            <div class="v-card__top">
+              <span class="v-cat-pill">AI · QA Automation</span>
+              <span class="v-brand-pill">VORTEX · LangGraph</span>
+            </div>
+            <h4 class="v-card__title">VORTEX — Multi-Agent Test Automation System with LangGraph</h4>
+            <p class="v-card__sub">A LangGraph workflow that converts user stories into Gherkin, validates scenarios, generates and runs tests, analyzes coverage, and attempts to repair failures.</p>
+            <div class="v-card__tags" aria-label="Technologies">
               <span><i class="ri-node-tree" aria-hidden="true"></i> LangGraph</span>
               <span><i class="ri-code-box-line" aria-hidden="true"></i> Gherkin</span>
               <span><i class="ri-ship-line" aria-hidden="true"></i> Docker</span>
               <span><i class="ri-file-code-line" aria-hidden="true"></i> Swagger</span>
             </div>
-            <div class="crown-metrics">
-              <div class="crown-metric-item">
-                <b>Gherkin</b>
-                <span>Scenario generation</span>
-              </div>
-              <div class="crown-metric-item">
-                <b>LangGraph</b>
-                <span>Workflow orchestration</span>
-              </div>
-              <div class="crown-metric-item">
-                <b>Coverage</b>
-                <span>Test results analysis</span>
-              </div>
-              <div class="crown-metric-item">
-                <b>Self-Healing</b>
-                <span>Attempts to repair failing tests</span>
-              </div>
+            <div class="v-card__actions">
+              <span class="v-card__link"><i class="ri-file-text-line" aria-hidden="true"></i> Project Details &amp; Demo</span>
+              <a href="https://github.com/maryem37/RAGVersionTestProject" target="_blank" rel="noopener noreferrer" class="v-card__link" onclick="event.stopPropagation()">
+                <i class="ri-github-line" aria-hidden="true"></i> Repository
+              </a>
             </div>
-            <button class="btn-video-launch" onclick="openProjectModal(1)">
-              <i class="ri-play-circle-line"></i> View Demo, Report &amp; Architecture
-            </button>
           </div>
-
-        </div>
-
-        <!-- Projects Catalog Grid -->
-        <div class="video-catalog-grid" id="project-catalog">
 
           <!-- Project: Job Matcher -->
           <div class="v-card" data-project-domains="ai data" onclick="openProjectModal(2)">
@@ -3614,50 +3577,50 @@
           <div class="connect-header">
             <div class="wa-badge">
               <i class="ri-whatsapp-line"></i>
-              <span>Get In Touch</span>
+              <span data-i18n="connect.badge">Get In Touch</span>
             </div>
-            <h2 class="connect-headline">Ready to work together? <span class="text-gradient">Let's talk.</span></h2>
-            <p class="connect-sub">Feel free to reach out with any questions or opportunities. I’d love to hear about your next project!</p>
-            <div class="connect-availability"><i class="ri-circle-fill"></i><span>Open to questions and opportunities</span></div>
+            <h2 class="connect-headline" data-i18n="connect.headline">Ready to work together? <span class="text-gradient">Let's talk.</span></h2>
+            <p class="connect-sub" data-i18n="connect.sub">Feel free to reach out with any questions or opportunities. I’d love to hear about your next project!</p>
+            <div class="connect-availability"><i class="ri-circle-fill"></i><span data-i18n="connect.availability">Open to questions and opportunities</span></div>
             <a class="connect-email-link" href="mailto:mariem.kbaier@enis.tn"><i class="ri-mail-send-line"></i><span data-i18n="connect.emailCta">Prefer email? Write to Mariem</span></a>
           </div>
 
           <div class="contact-form-heading">
-            <span class="contact-form-kicker"><i class="ri-chat-smile-3-line"></i> <span>Get in Touch</span></span>
-            <h3>Send me a message</h3>
-            <p>Fill out the form and I’ll get back to you soon.</p>
+            <span class="contact-form-kicker"><i class="ri-chat-smile-3-line"></i> <span data-i18n="connect.formKicker">Start a conversation</span></span>
+            <h3 data-i18n="connect.formTitle">Tell me about the opportunity</h3>
+            <p data-i18n="connect.formHint">Share a few details and I’ll get back to you directly on WhatsApp.</p>
           </div>
           <form class="wa-form" id="contact-form" onsubmit="handleWhatsAppSubmit(event)">
             <div class="wa-form-row">
               <div class="wa-field">
-                <label class="wa-label" for="wa-name"><i class="ri-user-3-line"></i> Name *</label>
-                <input type="text" id="wa-name" class="wa-input" placeholder="Your name" required>
+                <label class="wa-label" for="wa-name"><i class="ri-user-3-line"></i> <span data-i18n="connect.name">Name *</span></label>
+                <input type="text" id="wa-name" class="wa-input" placeholder="Your name" data-i18n-placeholder="connect.namePlaceholder" required>
               </div>
               <div class="wa-field">
-                <label class="wa-label" for="wa-email"><i class="ri-mail-line"></i> Email *</label>
-                <input type="email" id="wa-email" class="wa-input" placeholder="you@example.com" required>
+                <label class="wa-label" for="wa-email"><i class="ri-mail-line"></i> <span data-i18n="connect.emailLabel">Email *</span></label>
+                <input type="email" id="wa-email" class="wa-input" placeholder="you@example.com" data-i18n-placeholder="connect.emailPlaceholder" required>
               </div>
             </div>
 
             <div class="wa-field">
-              <label class="wa-label" for="wa-subject"><i class="ri-bookmark-line"></i> Subject *</label>
-              <input type="text" id="wa-subject" class="wa-input" placeholder="What is this about?" required>
+              <label class="wa-label" for="wa-subject"><i class="ri-bookmark-line"></i> <span data-i18n="connect.subject">Subject *</span></label>
+              <input type="text" id="wa-subject" class="wa-input" placeholder="What is this about?" data-i18n-placeholder="connect.subjectPlaceholder" required>
             </div>
             <div class="wa-field">
-              <label class="wa-label" for="contact-method"><i class="ri-send-plane-line"></i> I prefer to contact you by *</label>
+              <label class="wa-label" for="contact-method"><i class="ri-send-plane-line"></i> <span data-i18n="connect.method">I prefer to contact you by *</span></label>
               <select id="contact-method" class="wa-input wa-select" required>
-                <option value="whatsapp">WhatsApp (+216 27 168 075)</option>
-                <option value="email">Email (mariem.kbaier@enis.tn)</option>
+                <option value="whatsapp" data-i18n="connect.whatsappOption">WhatsApp (+216 27 168 075)</option>
+                <option value="email" data-i18n="connect.emailOption">Email (mariem.kbaier@enis.tn)</option>
               </select>
             </div>
             <div class="wa-field">
-              <label class="wa-label" for="wa-brief"><i class="ri-chat-3-line"></i> Message *</label>
-              <textarea id="wa-brief" class="wa-input wa-textarea" placeholder="Write your message here..." required></textarea>
+              <label class="wa-label" for="wa-brief"><i class="ri-chat-3-line"></i> <span data-i18n="connect.message">Message *</span></label>
+              <textarea id="wa-brief" class="wa-input wa-textarea" placeholder="Write your message here..." data-i18n-placeholder="connect.messagePlaceholder" required></textarea>
             </div>
 
             <button type="submit" class="wa-send-btn" id="wa-submit-btn">
               <i class="ri-whatsapp-line"></i>
-              <span>Send Message</span>
+              <span data-i18n="connect.sendWa">Send via WhatsApp</span>
               <i class="ri-arrow-right-up-line"></i>
             </button>
           </form>
@@ -3667,7 +3630,7 @@
             <div class="contact-pill-card">
               <div class="contact-pill__icon"><i class="ri-mail-line"></i></div>
               <div class="contact-pill__meta">
-                <span class="contact-pill__label">Email</span>
+                <span class="contact-pill__label" data-i18n="connect.emailLabelShort">Email</span>
                 <a href="mailto:mariem.kbaier@enis.tn" class="contact-pill__value">mariem.kbaier@enis.tn</a>
               </div>
             </div>
@@ -3675,7 +3638,7 @@
             <div class="contact-pill-card">
               <div class="contact-pill__icon"><i class="ri-phone-line"></i></div>
               <div class="contact-pill__meta">
-                <span class="contact-pill__label">Phone</span>
+                <span class="contact-pill__label" data-i18n="connect.phoneLabel">Phone</span>
                 <a href="tel:+21627168075" class="contact-pill__value">+216 27 168 075</a>
               </div>
             </div>
@@ -3683,8 +3646,8 @@
             <div class="contact-pill-card">
               <div class="contact-pill__icon"><i class="ri-map-pin-line"></i></div>
               <div class="contact-pill__meta">
-                <span class="contact-pill__label">Location</span>
-                <span class="contact-pill__value">Tunis · Open to relocation</span>
+                <span class="contact-pill__label" data-i18n="connect.locationLabel">Location</span>
+                <span class="contact-pill__value" data-i18n="connect.locationValue">Tunis · Open to relocation</span>
               </div>
             </div>
 
@@ -3699,8 +3662,8 @@
             <div class="contact-pill-card">
               <div class="contact-pill__icon"><i class="ri-graduation-cap-line"></i></div>
               <div class="contact-pill__meta">
-                <span class="contact-pill__label">Education</span>
-                <span class="contact-pill__value">ENIS Computer Engineering</span>
+                <span class="contact-pill__label" data-i18n="connect.educationLabel">Education</span>
+                <span class="contact-pill__value" data-i18n="connect.educationValue">ENIS Computer Engineering</span>
               </div>
             </div>
           </div>
@@ -4075,8 +4038,6 @@
     // ----------------------------------------------------
     const projectFilterButtons = document.querySelectorAll(".project-filter-btn");
     const projectFilterItems = document.querySelectorAll("[data-project-domains]");
-    const crownProjects = document.querySelector(".video-crown-dual");
-
     projectFilterButtons.forEach(button => {
       button.addEventListener("click", () => {
         const selectedDomain = button.dataset.projectFilter;
@@ -4092,10 +4053,6 @@
           project.classList.toggle("project-filter-hidden", !matches);
         });
 
-        if (crownProjects) {
-          const hasVisibleCrown = crownProjects.querySelector(".crown-card:not(.project-filter-hidden)");
-          crownProjects.classList.toggle("project-filter-empty", !hasVisibleCrown);
-        }
       });
     });
 
@@ -4370,7 +4327,9 @@
       const brief = document.getElementById("wa-brief").value.trim();
       const method = document.getElementById("contact-method").value;
 
-      const message = `Hello Mariem,\n\nMy name is ${name}.\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${brief}`;
+      const message = currentLang === "fr"
+        ? `Bonjour Mariem,\n\nJe m’appelle ${name}.\nE-mail : ${email}\nSujet : ${subject}\n\nMessage :\n${brief}`
+        : `Hello Mariem,\n\nMy name is ${name}.\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${brief}`;
       if (method === "email") {
         const mailtoURL = `mailto:mariem.kbaier@enis.tn?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
         window.location.href = mailtoURL;
@@ -4534,7 +4493,7 @@
         "about.downloadCv": "Download CV",
         "sec.journeyLabel": "Background",
         "sec.journeyTitle": "ACADEMIC & PROFESSIONAL JOURNEY",
-        "sec.journeySub": "Rigorous preparatory foundation followed by specialized engineering in AI & MLOps",
+        "sec.journeySub": "Rigorous preparatory foundation followed by specialized engineering in AI & Data",
         "sec.workLabel": "9+ Featured Engineering Projects",
         "sec.workTitle": "FEATURED PROJECTS",
         "sec.workSub": "Selected projects in multi-agent AI, RAG, cloud systems, and machine learning.",
@@ -4544,7 +4503,7 @@
         "sec.achieveLabel": "Leadership & Events",
         "sec.achieveTitle": "LEADERSHIP & ACHIEVEMENTS",
         "sec.achieveSub": "National hackathons, engineering competitions, organizational leadership, and community impact",
-        "connect.badge": "Direct Message",
+        "connect.badge": "Get in Touch",
         "connect.headline": `Let's Build Something <span class="text-gradient">Intelligent</span>`,
         "connect.sub": "I’m looking for a 2027 PFE internship in Data & AI. If you’re building intelligent products or data platforms, I’d love to talk about how I can contribute.",
         "connect.availability": "Available for a 2027 PFE internship",
@@ -4552,7 +4511,24 @@
         "connect.formKicker": "Start a conversation",
         "connect.formTitle": "Tell me about the opportunity",
         "connect.formHint": "Share a few details and I’ll get back to you directly on WhatsApp.",
-        "connect.sendWa": "Send via WhatsApp",
+        "connect.sendWa": "Send Message",
+        "connect.name": "Name *",
+        "connect.namePlaceholder": "Your name",
+        "connect.emailLabel": "Email *",
+        "connect.emailLabelShort": "Email",
+        "connect.emailPlaceholder": "you@example.com",
+        "connect.subject": "Subject *",
+        "connect.subjectPlaceholder": "What is this about?",
+        "connect.method": "I prefer to contact you by *",
+        "connect.whatsappOption": "WhatsApp (+216 27 168 075)",
+        "connect.emailOption": "Email (mariem.kbaier@enis.tn)",
+        "connect.message": "Message *",
+        "connect.messagePlaceholder": "Write your message here...",
+        "connect.phoneLabel": "Phone",
+        "connect.locationLabel": "Location",
+        "connect.locationValue": "Tunis · Open to relocation",
+        "connect.educationLabel": "Education",
+        "connect.educationValue": "ENIS Computer Engineering",
         "footer.rights": "© 2026 Mariem Kbaier. All Rights Reserved."
       },
       fr: {
@@ -4577,7 +4553,7 @@
         "about.downloadCv": "Télécharger le CV",
         "sec.journeyLabel": "Parcours",
         "sec.journeyTitle": "PARCOURS ACADÉMIQUE & PROFESSIONNEL",
-        "sec.journeySub": "Formation préparatoire rigoureuse suivie d'une ingénierie spécialisée en IA & MLOps",
+        "sec.journeySub": "Formation préparatoire rigoureuse suivie d'une ingénierie spécialisée en IA & données",
         "sec.workLabel": "9+ Projets d'Ingénierie",
         "sec.workTitle": "PROJETS EN VEDETTE",
         "sec.workSub": "Une sélection de projets en IA multi-agents, RAG, cloud et apprentissage automatique.",
@@ -4587,18 +4563,135 @@
         "sec.achieveLabel": "Leadership & Événements",
         "sec.achieveTitle": "LEADERSHIP & ACCOMPLISSEMENTS",
         "sec.achieveSub": "Hackathons nationaux, compétitions d'ingénierie, direction de design et impact associatif",
-        "connect.badge": "Message Direct",
-        "connect.headline": `Construisons Quelque Chose <span class="text-gradient">d'Intelligent</span>`,
+        "connect.badge": "Contact",
+        "connect.headline": `Prête à collaborer ? <span class="text-gradient">Parlons-en.</span>`,
         "connect.sub": "Je recherche un stage PFE 2027 en Data & AI. Vous développez des produits intelligents ou des plateformes de données ? Parlons de la façon dont je pourrais contribuer à votre équipe.",
         "connect.availability": "Disponible pour un stage PFE en 2027",
         "connect.emailCta": "Vous préférez l’email ? Écrivez-moi",
         "connect.formKicker": "Commençons à échanger",
-        "connect.formTitle": "Parlez-moi de l’opportunité",
-        "connect.formHint": "Présentez votre besoin et je vous répondrai directement sur WhatsApp.",
-        "connect.sendWa": "Envoyer via WhatsApp",
+        "connect.formTitle": "Envoyez-moi un message",
+        "connect.formHint": "Remplissez le formulaire et je vous répondrai rapidement.",
+        "connect.sendWa": "Envoyer le message",
+        "connect.name": "Nom *",
+        "connect.namePlaceholder": "Votre nom",
+        "connect.emailLabel": "E-mail *",
+        "connect.emailLabelShort": "E-mail",
+        "connect.emailPlaceholder": "vous@exemple.com",
+        "connect.subject": "Sujet *",
+        "connect.subjectPlaceholder": "Quel est l’objet de votre message ?",
+        "connect.method": "Je préfère être contactée par *",
+        "connect.whatsappOption": "WhatsApp (+216 27 168 075)",
+        "connect.emailOption": "E-mail (mariem.kbaier@enis.tn)",
+        "connect.message": "Message *",
+        "connect.messagePlaceholder": "Écrivez votre message ici…",
+        "connect.phoneLabel": "Téléphone",
+        "connect.locationLabel": "Localisation",
+        "connect.locationValue": "Tunis · Ouverte à la mobilité",
+        "connect.educationLabel": "Formation",
+        "connect.educationValue": "Génie informatique à l’ENIS",
         "footer.rights": "© 2026 Mariem Kbaier. Tous droits réservés."
       }
     };
+
+    const PROJECT_SECTION_FR = {
+      ".sw-dash__cat": ["01 / IA agentique", "02 / Recherche", "03 / Streaming", "04 / DevOps"],
+      ".sw-dash__title": [
+        "Systèmes multi-agents & LangGraph",
+        "RAG hybride & évaluation",
+        "Architecture événementielle & Kafka",
+        "Déploiement Cloud & Data"
+      ],
+      ".sw-dash__desc": [
+        "Conception de graphes d’agents à état, de routage dynamique avec superviseur, d’outils MCP et de pipelines de tests auto-réparateurs.",
+        "Mise en place d’une recherche par fusion de rangs réciproques (BM25 + dense) avec Qdrant/ChromaDB et évaluation scientifique via RAGAS.",
+        "Développement de microservices asynchrones coordonnés par Apache Kafka, avec des groupes de consommateurs parallèles et Spring Cloud Gateway.",
+        "Conception de solutions AWS serverless pour la télémétrie (IoT Core, Lambda, DynamoDB) et de pipelines Docker avec CI/CD."
+      ],
+      ".sw-dash__chips span": [
+        "LangGraph", "MCP (FastMCP)", "Modèle superviseur", "Groq LLaMA 3.3",
+        "RAG hybride", "RAGAS (0.941)", "Qdrant", "ChromaDB", "Mistral AI",
+        "Apache Kafka", "Spring Boot", "Groupes de consommateurs", "Microservices",
+        "Docker", "AWS IoT Core", "Lambda", "DynamoDB", "GitHub Actions"
+      ],
+      ".project-filter-btn[data-project-filter='all']": "Tout",
+      ".project-filter-btn[data-project-filter='ai']": "IA",
+      ".project-filter-btn[data-project-filter='data']": "Données",
+      ".project-filter-btn[data-project-filter='devops']": "DevOps",
+      ".project-filter-btn[data-project-filter='cloud']": "Cloud",
+      ".project-filter-btn[data-project-filter='qa']": "Tests QA",
+      ".project-filter-btn[data-project-filter='cybersecurity']": "Cybersécurité",
+      "#project-catalog .v-cat-pill": [
+        "Agriculture · IA multi-agents", "IA · Automatisation QA", "MCP & IA agentique", "Cloud sans serveur", "Flux distribués", "Pipeline ML", "RAG privé",
+        "Informatique décisionnelle", "Cybersécurité", "Projet", "Automatisation QA"
+      ],
+      "#project-catalog .v-card__title": [
+        "AgriGuide — Plateforme agricole d’aide à la décision multi-agents",
+        "VORTEX — Système multi-agents d’automatisation des tests avec LangGraph",
+        "Assistant de recherche d’emploi avec agents IA et MCP",
+        "FleetPro : télémétrie en temps réel sans serveur",
+        "EventFlow : microservices asynchrones",
+        "Prédiction de l’attrition client et analyse",
+        "Assistant de connaissances IA (RAG privé)",
+        "PerfPulse : agent d’analyse des indicateurs KPI",
+        "FogWatch : détection collaborative des attaques",
+        "EVA-Guard",
+        "Pipeline QA complet piloté par IA"
+      ],
+      "#project-catalog .v-card__sub": [
+        "Une plateforme agricole multi-agents pour analyser les parcelles, recommander des cultures, surveiller les cultures par satellite, consulter la réglementation et planifier l’activité agricole.",
+        "Un workflow LangGraph qui transforme les récits utilisateurs en scénarios Gherkin, valide les scénarios, génère et exécute les tests, analyse la couverture et tente de corriger les échecs.",
+        "Recherche des offres d’emploi, évalue leur adéquation avec le CV à l’aide d’embeddings et des compétences requises, vérifie les éléments cités et génère des conseils de carrière et des rapports PDF.",
+        "Suivi de flotte sans serveur : AWS IoT Core reçoit les données GPS, Lambda et DynamoDB traitent les positions, les WebSockets mettent à jour la carte et SNS envoie les alertes d’arrivée par e-mail.",
+        "Système de billetterie avec des services Spring Boot, des workflows Kafka, une persistance MySQL, une passerelle Spring Cloud et une interface légère.",
+        "Pipeline ML de bout en bout sur 4 372 profils clients : prédiction du départ avec XGBoost, segmentation avec K-Means et DBSCAN, et API analytique Flask.",
+        "Assistant conversationnel privé pour interroger des PDF complexes, avec recherche ChromaDB, inférence locale via Ollama et recherche Web en option.",
+        "En cours de développement : un agent IA surveille les KPI, signale les variations importantes, identifie les produits ou régions concernés et prépare une synthèse pour Power BI.",
+        "Système distribué de détection d’intrusions avec Suricata sur trois sites, reliés par Tailscale et déployés avec K3s, avec une réponse réseau via nftables.",
+        "Consultez le projet et son implémentation dans le dépôt.",
+        "Chaîne de bout en bout : exigences → cas de test → export vers un outil de gestion → tests automatisés → intégration continue → rapport de synthèse. Le projet met l’accent sur l’orchestration et la reproductibilité."
+      ],
+      "#project-catalog .v-card__actions .v-card__link": [
+        "Détails du projet et démo", "Dépôt GitHub", "Détails du projet et démo", "Dépôt GitHub"
+      ],
+      "#project-catalog .v-brand-pill": ["Talan & ENIS", "VORTEX · LangGraph", "FastMCP", "Stack AWS", "Apache Kafka", "XGBoost & Flask", "FastAPI & Ollama", "IDS distribués"],
+      "#project-catalog .project-status-badge": ["En cours", "En cours", "En cours"],
+      "#project-catalog .v-card__actions .v-card__link:nth-child(1)": [
+        "Détails du projet et démo", "Détails du projet et démo", "Détails et métriques", "Détails et métriques",
+        "Détails et métriques", "Détails du projet", "Détails du projet", "Détails du projet",
+        "Détails du projet", "Dépôt GitHub", "Dépôt GitHub"
+      ],
+      "#project-catalog .v-card__actions .v-card__link:nth-child(2)": [
+        "Dépôt GitHub", "Dépôt GitHub", "Dépôt GitHub", "Dépôt GitHub", "Dépôt GitHub", "Dépôt GitHub", "Dépôt GitHub"
+      ],
+      "#project-catalog .v-card:nth-child(8) .v-card__tags span": ["Informatique décisionnelle", "Suivi des KPI", "Power BI"],
+      "#project-catalog .v-card:nth-child(11) .v-card__tags span:nth-child(4)": "Gestion des tests"
+    };
+
+    function applyProjectLanguage(lang) {
+      Object.entries(PROJECT_SECTION_FR).forEach(([selector, frenchCopy]) => {
+        document.querySelectorAll(selector).forEach((element, index) => {
+          const textNodes = [];
+          const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT);
+          while (walker.nextNode()) {
+            if (walker.currentNode.nodeValue.trim()) textNodes.push(walker.currentNode);
+          }
+          const textNode = textNodes[textNodes.length - 1];
+          if (!element.dataset.projectEnglishText) {
+            element.dataset.projectEnglishText = textNode ? textNode.nodeValue.trim() : element.textContent.trim();
+          }
+          const translated = Array.isArray(frenchCopy) ? frenchCopy[index] : frenchCopy;
+          const label = lang === "fr" && translated !== undefined ? translated : element.dataset.projectEnglishText;
+          if (textNode) {
+            const leadingSpace = /^\s*/.exec(textNode.nodeValue)?.[0] || "";
+            textNode.nodeValue = leadingSpace + label;
+          } else {
+            element.textContent = label;
+          }
+        });
+      });
+      const filterGroup = document.querySelector(".project-filters");
+      if (filterGroup) filterGroup.setAttribute("aria-label", lang === "fr" ? "Filtrer les projets par domaine" : "Filter projects by domain");
+    }
 
     let currentLang = localStorage.getItem("lang") || "en";
 
@@ -4644,14 +4737,14 @@
     const HERO_TYPEWRITER_PHRASES = {
       en: [
         "Data & AI · Final-Year Computer Engineering Student",
-        "AI & MLOps Engineer",
+        "AI & Data Engineer",
         "Multi-Agent Systems Builder",
         "RAG & Evaluation Specialist",
         "Cloud & Distributed Systems Engineer"
       ],
       fr: [
         "Data & AI · Étudiante en dernière année de génie informatique",
-        "Ingénieure en IA & MLOps",
+        "Ingénieure en IA & Data",
         "Conceptrice de systèmes multi-agents",
         "Spécialiste RAG & évaluation",
         "Ingénieure Cloud & systèmes distribués"
@@ -4707,6 +4800,13 @@
           el.innerHTML = dict[key];
         }
       });
+
+      document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+        const key = el.getAttribute("data-i18n-placeholder");
+        if (dict[key] !== undefined) el.setAttribute("placeholder", dict[key]);
+      });
+
+      applyProjectLanguage(lang);
 
       const pill = document.getElementById("lang-toggle");
       if (pill) {
