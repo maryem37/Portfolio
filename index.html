@@ -1297,7 +1297,8 @@
     /* ==================== 4. PROJECTS SHOWCASE ==================== */
     .video-crown-dual {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      grid-auto-rows: 560px;
       gap: 1.75rem;
       margin-bottom: 3rem;
     }
@@ -1447,10 +1448,13 @@
     /* Projects Catalog Grid */
     .video-catalog-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      grid-auto-rows: 1fr;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      grid-auto-rows: 560px;
       gap: 1.65rem;
     }
+
+    .video-crown-dual .crown-card,
+    .video-catalog-grid .v-card { height: 100%; }
 
     .v-card {
       background: var(--bg-surface);
