@@ -1,5 +1,4 @@
 videos/*
-!videos/agriment-demo.mp4
 !videos/vortex-demo.mp4
 !videos/le-final.mp4
 /index copy.html
