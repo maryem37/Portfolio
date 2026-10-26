@@ -1302,6 +1302,35 @@
       margin-bottom: 3rem;
     }
 
+    .project-filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.6rem;
+      margin: 1.5rem 0 2.25rem;
+    }
+
+    .project-filter-btn {
+      padding: 0.58rem 1rem;
+      border: 1px solid var(--border-light);
+      border-radius: var(--r-full);
+      background: var(--surface-2);
+      color: var(--text-secondary);
+      font: 700 var(--fs-xs) var(--font-display);
+      cursor: pointer;
+      transition: all var(--dur-2) ease;
+    }
+
+    .project-filter-btn:hover { border-color: var(--accent-gold); color: var(--text-primary); }
+    .project-filter-btn.active {
+      color: #fff;
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-bright));
+      box-shadow: 0 6px 18px rgba(59, 130, 246, .24);
+    }
+    .project-filter-hidden { display: none !important; }
+    .video-crown-dual.project-filter-empty { display: none; }
+
     .crown-card {
       background: radial-gradient(120% 90% at 50% 0%, rgba(59, 130, 246, 0.12) 0%, #101014 65%);
       border: 1.5px solid rgba(59, 130, 246, 0.45);
@@ -2874,11 +2903,21 @@
           <p class="section-subtitle" data-i18n="sec.workSub">Selected projects in multi-agent AI, RAG, cloud systems, and machine learning.</p>
         </div>
 
+        <div class="project-filters" role="group" aria-label="Filter projects by domain">
+          <button class="project-filter-btn active" type="button" data-project-filter="all" aria-pressed="true">All</button>
+          <button class="project-filter-btn" type="button" data-project-filter="ai" aria-pressed="false">AI</button>
+          <button class="project-filter-btn" type="button" data-project-filter="data" aria-pressed="false">Data</button>
+          <button class="project-filter-btn" type="button" data-project-filter="devops" aria-pressed="false">DevOps</button>
+          <button class="project-filter-btn" type="button" data-project-filter="cloud" aria-pressed="false">Cloud</button>
+          <button class="project-filter-btn" type="button" data-project-filter="qa" aria-pressed="false">QA</button>
+          <button class="project-filter-btn" type="button" data-project-filter="cybersecurity" aria-pressed="false">Cybersecurity</button>
+        </div>
+
         <!-- Dual Crown Jewels Spotlight -->
         <div class="video-crown-dual">
 
           <!-- Crown Jewel 1: AgriGuide / AgriMent -->
-          <div class="crown-card">
+          <div class="crown-card" data-project-domains="ai data">
             <div class="crown-badge gold-badge">👑 2ND PLACE · TALAN SUMMER CAMP (120+ PARTICIPANTS)</div>
             <div class="crown-brand">Talan &amp; ENIS · AgriGuide / AgriMent</div>
             <h3 class="crown-title">AgriGuide — Multi-Agent Agricultural Decision-Support Platform</h3>
@@ -2914,7 +2953,7 @@
           </div>
 
           <!-- Crown Jewel 2: VORTEX -->
-          <div class="crown-card">
+          <div class="crown-card" data-project-domains="ai qa devops">
             <div class="crown-badge gold-badge">⚡ AUTONOMOUS SELF-REPAIRING PIPELINE</div>
             <div class="crown-brand">VORTEX · LangGraph Architecture</div>
             <h3 class="crown-title">VORTEX — Multi-Agent Test Automation System with LangGraph</h3>
@@ -2954,7 +2993,7 @@
         <div class="video-catalog-grid" id="project-catalog">
 
           <!-- Project: Job Matcher -->
-          <div class="v-card" onclick="openProjectModal(2)">
+          <div class="v-card" data-project-domains="ai data" onclick="openProjectModal(2)">
             <div class="v-card__top">
               <span class="v-cat-pill">MCP &amp; Agentic AI</span>
               <span class="v-brand-pill">FastMCP</span>
@@ -2979,7 +3018,7 @@
           </div>
 
           <!-- Project: FleetPro -->
-          <div class="v-card" onclick="openProjectModal(3)">
+          <div class="v-card" data-project-domains="data devops cloud" onclick="openProjectModal(3)">
             <div class="v-card__top">
               <span class="v-cat-pill">Serverless Cloud</span>
               <span class="v-brand-pill">AWS Stack</span>
@@ -3003,7 +3042,7 @@
           </div>
 
           <!-- Project: EventFlow -->
-          <div class="v-card" onclick="openProjectModal(4)">
+          <div class="v-card" data-project-domains="data devops cloud" onclick="openProjectModal(4)">
             <div class="v-card__top">
               <span class="v-cat-pill">Distributed Streaming</span>
               <span class="v-brand-pill">Apache Kafka</span>
@@ -3027,7 +3066,7 @@
           </div>
 
           <!-- Project: Customer Churn -->
-          <div class="v-card" onclick="openProjectModal(5)">
+          <div class="v-card" data-project-domains="ai data" onclick="openProjectModal(5)">
             <div class="v-card__top">
               <span class="v-cat-pill">ML Pipeline</span>
               <span class="v-brand-pill">XGBoost &amp; Flask</span>
@@ -3048,7 +3087,7 @@
           </div>
 
           <!-- Project: AI Knowledge Assistant -->
-          <div class="v-card" onclick="openProjectModal(6)">
+          <div class="v-card" data-project-domains="ai data" onclick="openProjectModal(6)">
             <div class="v-card__top">
               <span class="v-cat-pill">Private RAG</span>
               <span class="v-brand-pill">FastAPI &amp; Ollama</span>
@@ -3069,7 +3108,7 @@
           </div>
 
           <!-- Project: PerfPulse -->
-          <div class="v-card" onclick="openProjectModal(7)">
+          <div class="v-card" data-project-domains="ai data" onclick="openProjectModal(7)">
             <div class="v-card__top">
               <span class="v-cat-pill">Business Intelligence</span>
               <span class="project-status-badge">In progress</span>
@@ -3090,7 +3129,7 @@
           </div>
 
           <!-- Project: FogWatch -->
-          <div class="v-card" onclick="openProjectModal(8)">
+          <div class="v-card" data-project-domains="cybersecurity devops" onclick="openProjectModal(8)">
             <div class="v-card__top">
               <span class="v-cat-pill">Cybersecurity</span>
               <span class="v-brand-pill">Distributed IDS</span>
@@ -3112,7 +3151,7 @@
           </div>
 
           <!-- Project: EVA-Guard (in progress) -->
-          <div class="v-card">
+          <div class="v-card" data-project-domains="qa devops">
             <div class="v-card__top">
               <span class="v-cat-pill">Project</span>
               <span class="project-status-badge">In progress</span>
@@ -3127,7 +3166,7 @@
           </div>
 
           <!-- Project in progress: AI-Driven QA Pipeline -->
-          <div class="v-card">
+          <div class="v-card" data-project-domains="ai qa devops">
             <div class="v-card__top">
               <span class="v-cat-pill">QA Automation</span>
               <span class="project-status-badge">In progress</span>
@@ -4020,6 +4059,35 @@
         report: ""
       }
     ];
+
+    // ----------------------------------------------------
+    // PROJECT DOMAIN FILTERS
+    // ----------------------------------------------------
+    const projectFilterButtons = document.querySelectorAll(".project-filter-btn");
+    const projectFilterItems = document.querySelectorAll("[data-project-domains]");
+    const crownProjects = document.querySelector(".video-crown-dual");
+
+    projectFilterButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const selectedDomain = button.dataset.projectFilter;
+        projectFilterButtons.forEach(filterButton => {
+          const isActive = filterButton === button;
+          filterButton.classList.toggle("active", isActive);
+          filterButton.setAttribute("aria-pressed", String(isActive));
+        });
+
+        projectFilterItems.forEach(project => {
+          const domains = project.dataset.projectDomains.split(/\s+/);
+          const matches = selectedDomain === "all" || domains.includes(selectedDomain);
+          project.classList.toggle("project-filter-hidden", !matches);
+        });
+
+        if (crownProjects) {
+          const hasVisibleCrown = crownProjects.querySelector(".crown-card:not(.project-filter-hidden)");
+          crownProjects.classList.toggle("project-filter-empty", !hasVisibleCrown);
+        }
+      });
+    });
 
     // ----------------------------------------------------
     // PROJECT MODAL HANDLERS
