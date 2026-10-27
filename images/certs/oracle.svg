@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 100">
+  <g fill="none" stroke="#F80000" stroke-width="9">
+    <path d="M25 33c0-11 10-20 22-20h154c12 0 22 9 22 20s-10 20-22 20H47c-12 0-22-9-22-20Z"/>
+  </g>
+  <text x="20" y="91" fill="#F80000" font-family="Arial,sans-serif" font-size="51" font-weight="500" letter-spacing="-2">ORACLE</text>
+</svg>

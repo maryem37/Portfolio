@@ -1090,6 +1090,13 @@
       line-height: 1;
     }
 
+    .sw-dash__chips .specialty-brand-icon {
+      width: 1rem;
+      height: 1rem;
+      object-fit: contain;
+      flex: 0 0 auto;
+    }
+
     /* ==================== 3. JOURNEY & TECH STACK ==================== */
     /* ==================== 3. VERTICAL TIMELINE JOURNEY ==================== */
     .journey-section {
@@ -1541,38 +1548,52 @@
     .v-card__tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-bottom: 0.8rem;
+      gap: 0.5rem;
+      margin: 0 0 1rem;
     }
 
     .v-card__tags span {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      background: rgba(255, 255, 255, 0.035);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--r-full);
-      padding: 5px 11px;
+      width: 3.1rem;
+      height: 3.1rem;
+      display: inline-grid;
+      place-items: center;
+      overflow: hidden;
+      background: #eee9f8;
+      border: 1px solid rgba(167, 139, 250, 0.16);
+      border-radius: 14px;
+      padding: 0;
       font-family: var(--font-display);
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: var(--text-muted);
+      font-size: 0;
+      font-weight: 700;
+      color: #6338ef;
+      transition: transform var(--dur-2) var(--ease-out), background var(--dur-2) ease;
     }
 
+    .v-card__tags span:hover { transform: translateY(-2px); background: #f6f2ff; }
+
     .v-card__tags i {
-      color: #60a5fa;
-      font-size: 0.9rem;
+      color: #6338ef;
+      font-size: 1.3rem;
       line-height: 1;
     }
 
     .v-card__tags .tech-emoji {
       display: inline-grid;
-      width: 1rem;
+      width: auto;
       place-items: center;
       font-family: "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
-      font-size: 0.9rem;
+      font-size: 1.3rem;
       line-height: 1;
     }
+
+    .v-card__tags .tool-brand-icon {
+      display: block;
+      width: 1.8rem;
+      height: 1.8rem;
+      object-fit: contain;
+    }
+
+    [data-theme="light"] .v-card__tags span { background: #eee9f8; }
 
     .crown-techs { margin: 0 0 1.25rem; }
 
@@ -1634,6 +1655,15 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
+    }
+
+    .cert-provider-logo {
+      height: 2.25rem;
+      width: auto;
+      max-width: 9rem;
+      object-fit: contain;
+      border-radius: 8px;
+      flex: 0 0 auto;
     }
 
     .cert-provider-icon {
@@ -3201,8 +3231,7 @@
           <article class="cert-card">
             <div class="cert-card__header">
               <div class="cert-provider-wrap">
-                <i class="ri-award-line cert-provider-icon"></i>
-                <span class="cert-provider-name">Oracle</span>
+                <img class="cert-provider-logo" src="images/certs/oracle.svg" alt="Oracle" loading="lazy">
               </div>
             </div>
             <span class="cert-card__type">Agentic AI Foundations</span>
@@ -3219,8 +3248,7 @@
           <article class="cert-card">
             <div class="cert-card__header">
               <div class="cert-provider-wrap">
-                <i class="ri-brain-line cert-provider-icon"></i>
-                <span class="cert-provider-name">DeepLearning.AI</span>
+                <img class="cert-provider-logo" src="images/certs/deeplearningai.svg" alt="DeepLearning.AI" loading="lazy">
               </div>
             </div>
             <span class="cert-card__type">AI Systems Architecture</span>
@@ -3232,8 +3260,7 @@
           <article class="cert-card">
             <div class="cert-card__header">
               <div class="cert-provider-wrap">
-                <i class="ri-cloud-line cert-provider-icon"></i>
-                <span class="cert-provider-name">KodeKloud Credential</span>
+                <img class="cert-provider-logo" src="images/certs/kodekloud.svg" alt="KodeKloud" loading="lazy">
               </div>
             </div>
             <span class="cert-card__type">Distributed Streaming</span>
@@ -3245,8 +3272,7 @@
           <article class="cert-card">
             <div class="cert-card__header">
               <div class="cert-provider-wrap">
-                <i class="ri-code-s-slash-line cert-provider-icon"></i>
-                <span class="cert-provider-name">Cisco Academy</span>
+                <img class="cert-provider-logo" src="images/certs/cisco.jpg" alt="Cisco Academy" loading="lazy">
               </div>
             </div>
             <span class="cert-card__type">Systems Programming</span>
@@ -3263,8 +3289,7 @@
           <article class="cert-card">
             <div class="cert-card__header">
               <div class="cert-provider-wrap">
-                <i class="ri-code-box-line cert-provider-icon"></i>
-                <span class="cert-provider-name">Cisco</span>
+                <img class="cert-provider-logo" src="images/certs/cisco.jpg" alt="Cisco" loading="lazy">
               </div>
               <span class="cert-card__badge"><i class="ri-time-line" aria-hidden="true"></i> In progress</span>
             </div>
@@ -3277,8 +3302,7 @@
           <article class="cert-card">
             <div class="cert-card__header">
               <div class="cert-provider-wrap">
-                <i class="ri-task-line cert-provider-icon"></i>
-                <span class="cert-provider-name">SCRUMstudy</span>
+                <img class="cert-provider-logo" src="images/certs/scrumstudy.svg" alt="SCRUMstudy" loading="lazy">
               </div>
             </div>
             <span class="cert-card__type">Agile Methodology</span>
@@ -4866,26 +4890,74 @@
       title.before(icon);
     });
 
+    // Local SVG marks adapted from the icon collection requested by the user:
+    // github.com/emna-kaaniche2003/emna-kaaniche2003.github.io/tree/main/icons
+    const projectToolIconFiles = {
+      "langgraph": "langgraph", "fastapi": "fastapi", "qdrant": "qdrant", "postgis": "postgresql",
+      "gherkin": "cucumber", "docker": "docker", "docker compose": "docker", "swagger": "swagger",
+      "fastmcp": "agent", "tavily": "bm25",
+      "aws iot core": "iot", "lambda": "cloud", "dynamodb": "aws", "websocket": "stream",
+      "apache kafka": "kafka", "spring boot": "springboot", "mysql": "mysql", "xgboost": "xgboost",
+      "scikit-learn": "scikitlearn", "flask": "python", "k-means / dbscan": "ml",
+      "chromadb": "chromadb", "langchain": "langchain",
+      "business intelligence": "ml", "kpi monitoring": "stream", "power bi": "powerbi",
+      "gitlab ci": "git", "github actions": "github", "jenkins": "java", "test management": "junit",
+      "tailscale": "cloud", "nftables": "stream"
+    };
     const projectToolEmojis = {
-      "langgraph": "🧠", "fastapi": "⚡", "mistral ai": "✨", "qdrant": "🗄️", "postgis": "🗺️",
-      "gherkin": "🧪", "docker": "🐳", "swagger": "📘", "tensorzero": "🎛️", "fastmcp": "🔌",
-      "apify": "🤖", "tavily": "🔎", "aws iot core": "☁️", "lambda": "⚡", "dynamodb": "🗃️",
-      "websocket": "📡", "apache kafka": "📨", "spring boot": "🍃", "docker compose": "🐳", "mysql": "🐬",
-      "xgboost": "📈", "scikit-learn": "🧠", "flask": "⚗️", "k-means / dbscan": "📊",
-      "fastapi": "⚡", "chromadb": "🗄️", "ollama": "🦙", "langchain": "🔗",
-      "business intelligence": "📊", "kpi monitoring": "💹", "power bi": "📊",
-      "gitlab ci": "🦊", "github actions": "🐙", "jenkins": "⚙️", "test management": "✅"
+      "suricata": "🛡️", "k3s": "☸️", "ollama": "🦙", "tensorzero": "🎛️",
+      "apify": "🤖", "mistral ai": "✨"
     };
     document.querySelectorAll("#project-catalog .v-card__tags span").forEach(tag => {
+      const icon = tag.querySelector("i, .tech-emoji");
+      const accessibleLabel = Array.from(tag.childNodes)
+        .filter(node => node !== icon)
+        .map(node => node.textContent)
+        .join("")
+        .trim();
+      const label = accessibleLabel.toLowerCase();
+      const iconFile = projectToolIconFiles[label];
+      const emoji = projectToolEmojis[label];
+      tag.setAttribute("title", accessibleLabel);
+      tag.setAttribute("aria-label", accessibleLabel);
+      if (!icon) return;
+      if (iconFile) {
+        const image = document.createElement("img");
+        image.className = "tool-brand-icon";
+        image.src = `images/tool-icons/${iconFile}.svg`;
+        image.alt = "";
+        image.setAttribute("aria-hidden", "true");
+        image.onerror = () => image.replaceWith(icon);
+        icon.replaceWith(image);
+      } else if (emoji) {
+        const marker = document.createElement("b");
+        marker.className = "tech-emoji";
+        marker.setAttribute("aria-hidden", "true");
+        marker.textContent = emoji;
+        icon.replaceWith(marker);
+      }
+    });
+
+    const specialtyIconFiles = {
+      "langgraph": "langgraph", "mcp (fastmcp)": "agent", "supervisor pattern": "multiagent",
+      "groq llama 3.3": "groq", "hybrid rag": "rag", "ragas (0.941)": "deeplearning",
+      "qdrant": "qdrant", "chromadb": "chromadb", "mistral ai": "llm",
+      "apache kafka": "kafka", "spring boot": "springboot", "consumer groups": "stream",
+      "microservices": "micro", "docker": "docker", "aws iot core": "iot",
+      "lambda": "cloud", "dynamodb": "aws", "github actions": "github"
+    };
+    document.querySelectorAll(".sw-dash__chips span").forEach(tag => {
       const icon = tag.querySelector("i");
       const label = tag.textContent.trim().toLowerCase();
-      const emoji = projectToolEmojis[label];
-      if (!icon || !emoji) return;
-      const marker = document.createElement("b");
-      marker.className = "tech-emoji";
-      marker.setAttribute("aria-hidden", "true");
-      marker.textContent = emoji;
-      icon.replaceWith(marker);
+      const iconFile = specialtyIconFiles[label];
+      if (!icon || !iconFile) return;
+      const image = document.createElement("img");
+      image.className = "specialty-brand-icon";
+      image.src = `images/tool-icons/${iconFile}.svg`;
+      image.alt = "";
+      image.setAttribute("aria-hidden", "true");
+      image.onerror = () => image.replaceWith(icon);
+      icon.replaceWith(image);
     });
 
     // Set initial language

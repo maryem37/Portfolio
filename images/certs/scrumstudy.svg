@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 100">
+  <circle cx="48" cy="45" r="36" fill="none" stroke="#1263A5" stroke-width="8"/>
+  <path d="m28 45 15 15 31-38" fill="none" stroke="#5AAE43" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="98" y="53" fill="#1263A5" font-family="Arial,sans-serif" font-size="39" font-weight="700" letter-spacing="-1.2">SCRUM</text>
+  <text x="238" y="53" fill="#5AAE43" font-family="Arial,sans-serif" font-size="39" font-weight="700" letter-spacing="-1.2">study</text>
+  <text x="102" y="79" fill="#549E9B" font-family="Arial,sans-serif" font-size="15">Targeting success</text>
+</svg>
