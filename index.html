@@ -2721,8 +2721,8 @@
 
           <!-- Hero Actions -->
           <div class="hero__actions">
-            <a href="cv.pdf" download class="btn btn-primary" data-i18n="hero.downloadCv">
-              <i class="ri-download-2-line"></i> <span>Download CV</span>
+            <a href="cv/en/Mariem_Kbaier_CV_EN.pdf" data-cv-link download class="btn btn-primary">
+              <i class="ri-download-2-line"></i> <span data-i18n="hero.downloadCv">Download CV</span>
             </a>
             <a href="#projects" class="btn btn-outline" data-i18n="hero.viewProjects">
               <i class="ri-folder-open-line"></i> <span>View Projects</span>
@@ -2782,10 +2782,10 @@
               I'm a final-year <b>Computer Engineering Student</b> at the <b>National Engineering School of Sfax (ENIS)</b>, currently seeking a <b>2027 PFE internship in Data &amp; AI</b>. My work focuses on building and evaluating multi-agent systems with LangGraph and MCP, and quantitative RAG pipelines benchmarked with RAGAS. I also bring hands-on experience deploying projects with Docker, Kafka, and AWS.
             </p>
             <div class="cv-actions">
-              <a href="cv.pdf" target="_blank" rel="noreferrer" class="btn btn-sm btn-primary">
+              <a href="cv/en/Mariem_Kbaier_CV_EN.pdf" data-cv-link target="_blank" rel="noreferrer" class="btn btn-sm btn-primary">
                 <i class="ri-eye-line"></i> <span data-i18n="about.viewPdf">View CV (PDF)</span>
               </a>
-              <a href="cv.pdf" download class="btn btn-sm btn-outline">
+              <a href="cv/en/Mariem_Kbaier_CV_EN.pdf" data-cv-link download class="btn btn-sm btn-outline">
                 <i class="ri-download-line"></i> <span data-i18n="about.downloadCv">Download CV</span>
               </a>
             </div>
@@ -3725,7 +3725,7 @@
               <a href="https://github.com/maryem37" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="ri-github-fill"></i></a>
               <a href="mailto:mariem.kbaier@enis.tn" aria-label="Email"><i class="ri-mail-line"></i></a>
             </div>
-            <a href="cv.pdf" download class="portfolio-link-btn--footer">
+            <a href="cv/en/Mariem_Kbaier_CV_EN.pdf" data-cv-link download class="portfolio-link-btn--footer">
               <span data-i18n="hero.downloadCv">Download CV</span>
               <i class="ri-arrow-right-up-line"></i>
             </a>
@@ -4529,7 +4529,7 @@
         "nav.achievements": "Achievements",
         "nav.connect": "Connect",
         "hero.title": "Data & AI · Final-Year Computer Engineering Student",
-        "hero.bio": `Final-year Computer Engineering student at <strong class="highlight-gold">ENIS</strong>, seeking a <strong class="highlight-gold">2027 PFE internship in Data & AI</strong>. I build and evaluate multi-agent systems (LangGraph, MCP) and quantitative RAG pipelines (RAGAS), with hands-on deployment experience using Docker, Kafka, and AWS.`,
+        "hero.bio": `Between raw data and AI in production, there is an entire system: <strong class="highlight-gold">that's what I build</strong>. My next step is to build it with your team through a <strong class="highlight-gold">4–6 month final-year internship starting in February 2027</strong>.`,
         "hero.downloadCv": "Download CV",
         "hero.viewProjects": "View Projects",
         "hero.scroll": "Scroll Down",
@@ -4537,7 +4537,7 @@
         "sec.skillsTitle": "SPECIALTIES & EXPERTISE",
         "sec.skillsSub": "Bridging autonomous multi-agent systems, quantitative RAG pipelines, and distributed event microservices",
         "about.journeyBadge": "The Journey",
-        "about.journeyText": `I'm a final-year <b>Computer Engineering Student</b> at the <b>National Engineering School of Sfax (ENIS)</b>, currently seeking a <b>2027 PFE internship in Data & AI</b>. My work focuses on building and evaluating multi-agent systems with LangGraph and MCP, and quantitative RAG pipelines benchmarked with RAGAS. I also bring hands-on experience deploying projects with Docker, Kafka, and AWS.`,
+        "about.journeyText": `Final-year Computer Engineering student at the National Engineering School of Sfax (ENIS), seeking a 2027 PFE internship in Data & AI. My projects focus on designing and evaluating multi-agent systems with LangGraph and MCP, as well as RAG pipelines evaluated with RAGAS. I also have hands-on deployment experience with Docker, Kafka, and AWS.`,
         "about.viewPdf": "View CV (PDF)",
         "about.downloadCv": "Download CV",
         "sec.journeyLabel": "Background",
@@ -4589,7 +4589,7 @@
         "nav.achievements": "Accomplissements",
         "nav.connect": "Contact",
         "hero.title": "Data & AI · Étudiante en dernière année de génie informatique",
-        "hero.bio": `Étudiante en dernière année de génie informatique à <strong class="highlight-gold">l'ENIS</strong>, à la recherche d'un <strong class="highlight-gold">stage PFE 2027 en Data & AI</strong>. Je conçois et évalue des systèmes multi-agents (LangGraph, MCP) et des pipelines RAG quantitatifs (RAGAS), avec une expérience pratique du déploiement via Docker, Kafka et AWS.`,
+        "hero.bio": `Entre la donnée brute et l’IA en production, il y a tout un système : <strong class="highlight-gold">c’est celui que je construis</strong>. Prochaine étape : le mettre en œuvre avec votre équipe lors d’un <strong class="highlight-gold">stage PFE de 4 à 6 mois dès février 2027</strong>.`,
         "hero.downloadCv": "Télécharger le CV",
         "hero.viewProjects": "Voir les Projets",
         "hero.scroll": "Faire défiler",
@@ -4716,6 +4716,30 @@
       "#project-catalog .v-card:nth-child(11) .v-card__tags span:nth-child(4)": "Gestion des tests"
     };
 
+    const CERT_SECTION_FR = {
+      ".cert-card__type": [
+        "Fondamentaux de l’IA agentique", "Architecture des systèmes d’IA", "Streaming distribué",
+        "Programmation système", "Automatisation réseau & API", "Méthodologie Agile"
+      ],
+      ".cert-card__title": [
+        "Associée certifiée en fondamentaux de l’IA agentique", "Systèmes multi-agents avec LangGraph",
+        "Apache Kafka – Architecture et flux de données en temps réel", "Cisco C Advanced – Systèmes et architecture mémoire",
+        "Cisco Certified DevNet Associate", "Certification Scrum Fundamentals (SFC™)"
+      ],
+      ".cert-card__desc": [
+        "Certification Oracle attestant des connaissances fondamentales en IA agentique.",
+        "Compétences validées en conception de graphes multi-agents à état, routage dynamique, modèles superviseurs, contrôle humain et couches de persistance.",
+        "Expertise validée en microservices événementiels, configuration de brokers Kafka, groupes de consommateurs, diffusion parallèle et partitionnement des topics.",
+        "Maîtrise avancée de la gestion manuelle de la mémoire, de l’arithmétique des pointeurs, des structures de données dynamiques, des appels système POSIX et de l’optimisation algorithmique.",
+        "Préparation en cours à la certification DevNet Associate : programmabilité réseau, API, Python et automatisation.",
+        "Connaissances certifiées des méthodes Agile, de la planification des sprints, de la coordination d’équipes pluridisciplinaires et de la gestion du backlog."
+      ],
+      ".cert-card__badge": "En cours",
+      ".cert-card__footer .cert-card__link": [
+        "Vérifier la certification", "Vérifier la certification", "Voir le certificat"
+      ]
+    };
+
     function applyProjectLanguage(lang) {
       Object.entries(PROJECT_SECTION_FR).forEach(([selector, frenchCopy]) => {
         document.querySelectorAll(selector).forEach((element, index) => {
@@ -4740,6 +4764,92 @@
       });
       const filterGroup = document.querySelector(".project-filters");
       if (filterGroup) filterGroup.setAttribute("aria-label", lang === "fr" ? "Filtrer les projets par domaine" : "Filter projects by domain");
+    }
+
+    function applyCertificationLanguage(lang) {
+      Object.entries(CERT_SECTION_FR).forEach(([selector, frenchCopy]) => {
+        document.querySelectorAll(selector).forEach((element, index) => {
+          const textNodes = [];
+          const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT);
+          while (walker.nextNode()) {
+            if (walker.currentNode.nodeValue.trim()) textNodes.push(walker.currentNode);
+          }
+          const textNode = textNodes[textNodes.length - 1];
+          if (!element.dataset.certEnglishText) {
+            element.dataset.certEnglishText = textNode ? textNode.nodeValue.trim() : element.textContent.trim();
+          }
+          const translated = Array.isArray(frenchCopy) ? frenchCopy[index] : frenchCopy;
+          const label = lang === "fr" && translated !== undefined ? translated : element.dataset.certEnglishText;
+          if (textNode) {
+            const leadingSpace = /^\s*/.exec(textNode.nodeValue)?.[0] || "";
+            textNode.nodeValue = leadingSpace + label;
+          } else {
+            element.textContent = label;
+          }
+        });
+      });
+    }
+
+    const ACHIEVEMENT_SECTION_FR = {
+      "6 Photos": "6 photos", "3 Photos": "3 photos", "2 Photos": "2 photos", "1 Photo": "1 photo",
+      "Jul — Aug 2026": "Juil. — août 2026",
+      "👑 2ND PLACE / 120+ TALAN": "👑 2E PLACE / 120+ PARTICIPANTS",
+      "🏆 1ST PLACE WINNER": "🏆 1RE PLACE",
+      "🥇 1ST PLACE CHALLENGER": "🥇 1ER PRIX DU CHALLENGE",
+      "⚡ LEADERSHIP & MEDIA": "⚡ LEADERSHIP & MÉDIAS",
+      "💡 HACKATHON & INNOVATION": "💡 HACKATHON & INNOVATION",
+      "🎨 CREATIVE IDENTITY": "🎨 IDENTITÉ VISUELLE",
+      "✨ ART DIRECTION": "✨ DIRECTION ARTISTIQUE",
+      "Non-Technical Challenge": "Défi non technique",
+      "Lead AI Architect · 2nd / 120+ Candidates": "Architecte IA principale · 2e sur 120+ participantes",
+      "1st Place Winner · IEEE PES Representative": "1re place · Représentante IEEE PES",
+      "1st Place Challenger · Core Planning Team": "1re place · Équipe organisatrice",
+      "Media Manager & Webmaster": "Responsable média & webmaster",
+      "Innovation Member · Hackathons & Mentorship": "Membre innovation · Hackathons & mentorat",
+      "Design Member · Visual Identity & Branding": "Membre design · Identité visuelle & branding",
+      "Design Manager · Creative Lead": "Responsable design · Direction créative",
+      "AgriMent: agricultural decision support with multi-agent AI, regulatory RAG, and satellite data.": "AgriMent : aide à la décision agricole grâce à l’IA multi-agents, au RAG réglementaire et aux données satellitaires.",
+      "Awarded 1st place representing IEEE PES Chapter ENIS in a national problem-solving challenge.": "1re place obtenue en représentant le chapitre IEEE PES de l’ENIS lors d’un concours national de résolution de problèmes.",
+      "Won 1st place in national congress competition and managed core logistics.": "1re place remportée lors d’un concours de congrès national, avec la gestion de la logistique principale.",
+      "Directed chapter media strategy, digital publishing, and built the chapter's web presence.": "Pilotage de la stratégie média du chapitre, de ses publications numériques et de sa présence sur le web.",
+      "Organized innovation challenges, ideation workshops, and technical mentorship.": "Organisation de défis d’innovation, d’ateliers d’idéation et de mentorat technique.",
+      "Created the event's promotional visual identity, posters, and digital collateral.": "Création de l’identité visuelle de l’événement, des affiches et des supports numériques.",
+      "Led the creative design team, orchestrating brand guidelines and motion assets.": "Direction de l’équipe de création, de la charte de marque et des contenus animés.",
+      "Multi-Agent": "Multi-agents", "Hybrid RAG": "RAG hybride",
+      "Problem Solving": "Résolution de problèmes", "National Congress": "Congrès national",
+      "Logistics": "Logistique", "Media Strategy": "Stratégie média", "Web Dev": "Développement web",
+      "Mentoring": "Mentorat", "Visual Identity": "Identité visuelle", "Brand Guidelines": "Charte de marque",
+      "Motion Design": "Motion design"
+    };
+
+    function applyAchievementLanguage(lang) {
+      const selectors = [".achieve-photo-badge", ".achieve-date", ".achieve-crown-label", ".achieve-title", ".achieve-role", ".achieve-desc", ".achieve-tag"];
+      document.querySelectorAll("#achieveMarqueeTrack .achieve-card").forEach(card => {
+        selectors.forEach(selector => {
+          card.querySelectorAll(selector).forEach(element => {
+            const textNodes = [];
+            const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT);
+            while (walker.nextNode()) {
+              if (walker.currentNode.nodeValue.trim()) textNodes.push(walker.currentNode);
+            }
+            const textNode = textNodes[textNodes.length - 1];
+            if (!element.dataset.achievementEnglishText) {
+              element.dataset.achievementEnglishText = textNode ? textNode.nodeValue.trim() : element.textContent.trim();
+            }
+            const original = element.dataset.achievementEnglishText;
+            const label = lang === "fr" ? (ACHIEVEMENT_SECTION_FR[original] || original) : original;
+            if (textNode) {
+              const leadingSpace = /^\s*/.exec(textNode.nodeValue)?.[0] || "";
+              textNode.nodeValue = leadingSpace + label;
+            }
+          });
+        });
+        card.querySelectorAll(".achieve-photo-img").forEach(image => {
+          if (!image.dataset.achievementEnglishAlt) image.dataset.achievementEnglishAlt = image.alt;
+          const originalAlt = image.dataset.achievementEnglishAlt;
+          image.alt = lang === "fr" ? (ACHIEVEMENT_SECTION_FR[originalAlt] || originalAlt) : originalAlt;
+        });
+      });
     }
 
     let currentLang = localStorage.getItem("lang") || "en";
@@ -4843,6 +4953,14 @@
       const dict = I18N[lang];
       if (!dict) return;
 
+      const cvHref = lang === "fr"
+        ? "cv/fr/Mariem_Kbaier_CV_FR.pdf"
+        : "cv/en/Mariem_Kbaier_CV_EN.pdf";
+      document.querySelectorAll("[data-cv-link]").forEach(link => {
+        link.href = cvHref;
+        if (link.hasAttribute("download")) link.setAttribute("download", lang === "fr" ? "Mariem_Kbaier_CV_FR.pdf" : "Mariem_Kbaier_CV_EN.pdf");
+      });
+
       document.querySelectorAll("[data-i18n]").forEach(el => {
         const key = el.getAttribute("data-i18n");
         if (dict[key] !== undefined) {
@@ -4856,6 +4974,8 @@
       });
 
       applyProjectLanguage(lang);
+      applyCertificationLanguage(lang);
+      applyAchievementLanguage(lang);
 
       const pill = document.getElementById("lang-toggle");
       if (pill) {
