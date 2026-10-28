@@ -769,48 +769,61 @@
       width: min(360px, 78vw);
       aspect-ratio: 1;
       border-radius: 50%;
+      padding: 7px;
       overflow: hidden;
-      border: 2px solid rgba(59, 130, 246, 0.92);
-      box-shadow:
-        0 0 0 6px rgba(255, 255, 255, 0.045),
-        0 0 0 7px rgba(59, 130, 246, 0.32),
-        0 28px 70px rgba(0, 0, 0, 0.55);
-      z-index: 1;
-      background: var(--bg-surface);
       isolation: isolate;
+      background: none;
+      border: none;
+      box-shadow:
+        0 0 70px rgba(59, 130, 246, 0.35),
+        0 30px 70px -20px rgba(0, 0, 0, 0.55);
+      z-index: 1;
       transition: transform .45s var(--ease-out), box-shadow .45s var(--ease-out);
     }
 
-    .hero__photo-wrapper::after {
+    .hero__photo-wrapper::before {
       content: "";
       position: absolute;
-      inset: 9px;
-      border: 1px solid rgba(255, 255, 255, 0.35);
-      border-radius: inherit;
-      pointer-events: none;
-      z-index: 1;
-      box-shadow: inset 0 0 35px rgba(0, 0, 0, 0.16);
+      inset: -50%;
+      background: conic-gradient(from 0deg, #3B82F6, #22d3ee, #8b5cf6, #3B82F6);
+      animation: ringSpin 9s linear infinite;
+      z-index: 0;
+    }
+
+    .hero__photo-wrapper::after {
+      display: none;
     }
 
     .hero__photo-wrapper:hover {
       transform: translateY(-5px);
       box-shadow:
-        0 0 0 6px rgba(255, 255, 255, 0.06),
-        0 0 0 7px rgba(59, 130, 246, 0.58),
-        0 34px 80px rgba(0, 0, 0, 0.62);
+        0 0 90px rgba(59, 130, 246, 0.5),
+        0 34px 80px -20px rgba(0, 0, 0, 0.6);
     }
 
     .hero__photo-wrapper img {
+      position: relative;
+      z-index: 1;
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: 50% 20%;
+      border-radius: 50%;
+      border: 6px solid var(--bg-dark);
       display: block;
       transition: transform 0.5s var(--ease-out);
     }
 
     .hero__photo-wrapper:hover img {
       transform: scale(1.03);
+    }
+
+    @keyframes ringSpin {
+      to { transform: rotate(360deg); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero__photo-wrapper::before { animation: none; }
     }
 
     /* Floating Crown Chips */
@@ -3508,10 +3521,10 @@
               <span class="achieve-num">03</span>
               <span class="achieve-date">2024 — 2025</span>
             </div>
-            <div class="achieve-crown-label" style="color:#60A5FA">🥇 1ST PLACE CHALLENGER</div>
+            <div class="achieve-crown-label" style="color:#60A5FA">🥇 1ST PLACE TEAM WINNER</div>
             <h3 class="achieve-title">TEC.Week 2.0 &amp; 3.0</h3>
-            <div class="achieve-role">1st Place Challenger &middot; Core Planning Team</div>
-            <p class="achieve-desc">Won 1st place in national congress competition and managed core logistics.</p>
+            <div class="achieve-role">Core Planning Team Member &middot; 1st Place Team Winner</div>
+            <p class="achieve-desc">Member of the core planning team and 1st-place winner of a national congress competition, managing the event’s main logistics.</p>
             <div class="achieve-tags">
               <span class="achieve-tag">National Congress</span>
               <span class="achieve-tag">Logistics</span>
@@ -3649,10 +3662,10 @@
               <span class="achieve-num">03</span>
               <span class="achieve-date">2024 — 2025</span>
             </div>
-            <div class="achieve-crown-label" style="color:#60A5FA">🥇 1ST PLACE CHALLENGER</div>
+            <div class="achieve-crown-label" style="color:#60A5FA">🥇 1ST PLACE TEAM WINNER</div>
             <h3 class="achieve-title">TEC.Week 2.0 &amp; 3.0</h3>
-            <div class="achieve-role">1st Place Challenger &middot; Core Planning Team</div>
-            <p class="achieve-desc">Won 1st place in national congress competition and managed core logistics.</p>
+            <div class="achieve-role">Core Planning Team Member &middot; 1st Place Team Winner</div>
+            <p class="achieve-desc">Member of the core planning team and 1st-place winner of a national congress competition, managing the event’s main logistics.</p>
             <div class="achieve-tags">
               <span class="achieve-tag">National Congress</span>
               <span class="achieve-tag">Logistics</span>
@@ -4989,7 +5002,7 @@
       "Jul — Aug 2026": "Juil. — août 2026",
       "👑 2ND PLACE / 120+ TALAN": "👑 2E PLACE / 120+ PARTICIPANTS",
       "🏆 1ST PLACE WINNER": "🏆 1RE PLACE",
-      "🥇 1ST PLACE CHALLENGER": "🥇 1ER PRIX DU CHALLENGE",
+      "🥇 1ST PLACE TEAM WINNER": "🥇 ÉQUIPE GAGNANTE — 1ER PRIX",
       "⚡ LEADERSHIP & MEDIA": "⚡ LEADERSHIP & MÉDIAS",
       "💡 HACKATHON & INNOVATION": "💡 HACKATHON & INNOVATION",
       "🎨 CREATIVE IDENTITY": "🎨 IDENTITÉ VISUELLE",
@@ -4997,14 +5010,14 @@
       "Non-Technical Challenge": "Défi non technique",
       "Lead AI Architect · 2nd / 120+ Candidates": "Architecte IA principale · 2e sur 120+ participantes",
       "1st Place Winner · IEEE PES Representative": "1re place · Représentante IEEE PES",
-      "1st Place Challenger · Core Planning Team": "1re place · Équipe organisatrice",
+      "Core Planning Team Member · 1st Place Team Winner": "Membre de l’équipe de planification principale · Équipe gagnante de la 1re place",
       "Media Manager & Webmaster": "Responsable média & webmaster",
       "Innovation Member · Hackathons & Mentorship": "Membre innovation · Hackathons & mentorat",
       "Design Member · Visual Identity & Branding": "Membre design · Identité visuelle & branding",
       "Design Manager · Creative Lead": "Responsable design · Direction créative",
       "AgriMent: agricultural decision support with multi-agent AI, regulatory RAG, and satellite data.": "AgriMent : aide à la décision agricole grâce à l’IA multi-agents, au RAG réglementaire et aux données satellitaires.",
       "Awarded 1st place representing IEEE PES Chapter ENIS in a national problem-solving challenge.": "1re place obtenue en représentant le chapitre IEEE PES de l’ENIS lors d’un concours national de résolution de problèmes.",
-      "Won 1st place in national congress competition and managed core logistics.": "1re place remportée lors d’un concours de congrès national, avec la gestion de la logistique principale.",
+      "Member of the core planning team and 1st-place winner of a national congress competition, managing the event’s main logistics.": "Membre de l’équipe de planification principale et gagnante de la 1re place lors d’un concours de congrès national, avec la gestion de la logistique principale.",
       "Directed chapter media strategy, digital publishing, and built the chapter's web presence.": "Pilotage de la stratégie média du chapitre, de ses publications numériques et de sa présence sur le web.",
       "Organized innovation challenges, ideation workshops, and technical mentorship.": "Organisation de défis d’innovation, d’ateliers d’idéation et de mentorat technique.",
       "Created the event's promotional visual identity, posters, and digital collateral.": "Création de l’identité visuelle de l’événement, des affiches et des supports numériques.",
