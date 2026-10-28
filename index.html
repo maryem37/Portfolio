@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Mariem Kbaier — AI & Data Engineer</title>
+  <title>Mariem Kbaier — AI & Data Engineering Student</title>
   <meta name="description"
     content="Portfolio of Mariem Kbaier — Final-year Computer Engineering student at ENIS specializing in Multi-Agent LLM architectures (LangGraph), quantitative RAG pipelines (RAGAS), and cloud microservices. Open to PFE Internship 2027.">
 
   <!-- Favicon -->
-  <link rel="icon" href="photo.jpg" type="image/jpeg">
+  <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
 
   <!-- Google Fonts: Cormorant Garamond, Plus Jakarta Sans, Bricolage Grotesque & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1117,6 +1117,9 @@
       padding-left: 36px;
       position: relative;
     }
+    .sw-dash-card .sw-dash__desc {
+      display: none;
+    }
 
     .timeline::before,
     .timeline::after {
@@ -1341,6 +1344,37 @@
       box-shadow: 0 6px 18px rgba(59, 130, 246, .24);
     }
     .project-filter-hidden { display: none !important; }
+    .projects-show-more-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+    .projects-show-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      min-height: 2.5rem;
+      padding: 0.55rem 0.9rem;
+      border: 1px solid var(--accent-blue);
+      border-radius: 999px;
+      color: var(--accent-blue);
+      background: transparent;
+      cursor: pointer;
+      font: inherit;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+    }
+    .projects-show-more:hover {
+      color: #fff;
+      background: var(--accent-blue);
+      transform: translateY(-1px);
+    }
+    .projects-show-more i {
+      font-size: 1.05rem;
+      line-height: 1;
+    }
 
     .crown-card {
       background: var(--bg-surface);
@@ -2660,7 +2694,7 @@
 
   <!-- Persistent Corner Hashtags -->
   <div class="fixed-footer-tag tag-left">#MARIEM_KBAIER</div>
-  <div class="fixed-footer-tag tag-right">#AI_DATA_ENGINEER</div>
+  <div class="fixed-footer-tag tag-right">#AI_DATA_ENGINEERING_STUDENT</div>
 
   <!-- ==================== HEADER & NAVBAR ==================== -->
   <header class="header" id="header">
@@ -2865,6 +2899,86 @@
                 <span><i class="ri-function-line" aria-hidden="true"></i> Lambda</span>
                 <span><i class="ri-database-2-line" aria-hidden="true"></i> DynamoDB</span>
                 <span><i class="ri-git-branch-line" aria-hidden="true"></i> GitHub Actions</span>
+              </div>
+            </div>
+
+            <!-- Card 05: Languages & Frameworks -->
+            <div class="sw-dash-card">
+              <div class="sw-dash__top">
+                <div class="sw-dash__icon">
+                  <i class="ri-code-s-slash-line"></i>
+                </div>
+                <span class="sw-dash__cat" data-i18n="skills.languagesCat">05 / Languages</span>
+              </div>
+              <h3 class="sw-dash__title" data-i18n="skills.languagesTitle">Languages &amp; Frameworks</h3>
+              <p class="sw-dash__desc" data-i18n="skills.languagesDesc">Building reliable applications and APIs across Python, Java, JavaScript, and modern backend frameworks.</p>
+              <div class="sw-dash__chips">
+                <span><i class="ri-code-s-slash-line" aria-hidden="true"></i> Python</span>
+                <span><i class="ri-java-line" aria-hidden="true"></i> Java</span>
+                <span><i class="ri-javascript-line" aria-hidden="true"></i> JavaScript</span>
+                <span><i class="ri-flashlight-line" aria-hidden="true"></i> FastAPI</span>
+                <span><i class="ri-leaf-line" aria-hidden="true"></i> Spring Boot</span>
+                <span><i class="ri-reactjs-line" aria-hidden="true"></i> React</span>
+              </div>
+            </div>
+
+            <!-- Card 06: Data & BI -->
+            <div class="sw-dash-card">
+              <div class="sw-dash__top">
+                <div class="sw-dash__icon">
+                  <i class="ri-bar-chart-box-line"></i>
+                </div>
+                <span class="sw-dash__cat" data-i18n="skills.dataCat">06 / Data</span>
+              </div>
+              <h3 class="sw-dash__title" data-i18n="skills.dataTitle">Data Engineering &amp; BI</h3>
+              <p class="sw-dash__desc" data-i18n="skills.dataDesc">Transforming raw data into reliable pipelines, analytical models, dashboards, and actionable business insights.</p>
+              <div class="sw-dash__chips">
+                <span><i class="ri-bar-chart-2-line" aria-hidden="true"></i> Pandas</span>
+                <span><i class="ri-database-2-line" aria-hidden="true"></i> SQL</span>
+                <span><i class="ri-pie-chart-2-line" aria-hidden="true"></i> Power BI</span>
+                <span><i class="ri-table-line" aria-hidden="true"></i> PySpark</span>
+                <span><i class="ri-database-line" aria-hidden="true"></i> PostgreSQL</span>
+                <span><i class="ri-cloud-line" aria-hidden="true"></i> Microsoft Fabric</span>
+              </div>
+            </div>
+
+            <!-- Card 07: MLOps & Cloud -->
+            <div class="sw-dash-card">
+              <div class="sw-dash__top">
+                <div class="sw-dash__icon">
+                  <i class="ri-settings-5-line"></i>
+                </div>
+                <span class="sw-dash__cat" data-i18n="skills.mlopsCat">07 / MLOps</span>
+              </div>
+              <h3 class="sw-dash__title" data-i18n="skills.mlopsTitle">MLOps &amp; Cloud Delivery</h3>
+              <p class="sw-dash__desc" data-i18n="skills.mlopsDesc">Packaging, testing, and deploying data products with reproducible workflows and cloud-ready infrastructure.</p>
+              <div class="sw-dash__chips">
+                <span><i class="ri-ship-line" aria-hidden="true"></i> Docker</span>
+                <span><i class="ri-git-branch-line" aria-hidden="true"></i> GitHub Actions</span>
+                <span><i class="ri-cloud-line" aria-hidden="true"></i> AWS</span>
+                <span><i class="ri-function-line" aria-hidden="true"></i> Lambda</span>
+                <span><i class="ri-kubernetes-line" aria-hidden="true"></i> K3s</span>
+                <span><i class="ri-git-merge-line" aria-hidden="true"></i> CI/CD</span>
+              </div>
+            </div>
+
+            <!-- Card 08: Testing & Security -->
+            <div class="sw-dash-card">
+              <div class="sw-dash__top">
+                <div class="sw-dash__icon">
+                  <i class="ri-shield-check-line"></i>
+                </div>
+                <span class="sw-dash__cat" data-i18n="skills.testingCat">08 / Quality</span>
+              </div>
+              <h3 class="sw-dash__title" data-i18n="skills.testingTitle">Testing &amp; Security</h3>
+              <p class="sw-dash__desc" data-i18n="skills.testingDesc">Designing testable services, automated quality gates, and distributed security monitoring for dependable systems.</p>
+              <div class="sw-dash__chips">
+                <span><i class="ri-checkbox-circle-line" aria-hidden="true"></i> BDD / Cucumber</span>
+                <span><i class="ri-test-tube-line" aria-hidden="true"></i> JUnit</span>
+                <span><i class="ri-file-code-line" aria-hidden="true"></i> RestAssured</span>
+                <span><i class="ri-shield-line" aria-hidden="true"></i> Suricata</span>
+                <span><i class="ri-lock-line" aria-hidden="true"></i> Tailscale</span>
+                <span><i class="ri-dashboard-line" aria-hidden="true"></i> JaCoCo</span>
               </div>
             </div>
 
@@ -3106,6 +3220,9 @@
               <span class="v-card__link">
                 <i class="ri-file-info-line"></i> Project Details
               </span>
+              <a href="https://github.com/maryem37/projet_ml_retail" target="_blank" rel="noopener noreferrer" class="v-card__link" onclick="event.stopPropagation()">
+                <i class="ri-github-line"></i> Repository
+              </a>
             </div>
           </div>
 
@@ -3209,6 +3326,13 @@
             </div>
           </div>
 
+        </div>
+
+        <div class="projects-show-more-wrap">
+          <button class="projects-show-more" id="projects-show-more" type="button" aria-expanded="false">
+            <i class="ri-add-line" aria-hidden="true"></i>
+            <span data-i18n="projects.showMore">View all</span>
+          </button>
         </div>
 
       </div>
@@ -4010,7 +4134,7 @@
           { name: "Lifetime spend", role: "Random Forest forecast (R²: 0.913)." },
           { name: "Flask REST API", role: "Serves analysis for an interactive analytics dashboard." }
         ],
-        repo: "",
+        repo: "https://github.com/maryem37/projet_ml_retail",
         report: ""
       },
       {
@@ -4055,6 +4179,8 @@
           { name: "Context finder", role: "Finds which product or region is associated with a change." },
           { name: "Conclusion writer", role: "Drafts a concise explanation for review and validation in Power BI." }
         ],
+        video: "videos/PerfPulse.mp4",
+        videoLabel: "PerfPulse — Project Presentation",
         repo: "https://github.com/maryem37/PerfPulse-Agent-IA-d-analyse-des-performances-d-entreprise",
         report: ""
       },
@@ -4087,9 +4213,33 @@
     // ----------------------------------------------------
     const projectFilterButtons = document.querySelectorAll(".project-filter-btn");
     const projectFilterItems = document.querySelectorAll("[data-project-domains]");
+    const projectsShowMoreButton = document.getElementById("projects-show-more");
+    let projectsExpanded = false;
+    let selectedProjectDomain = "all";
+
+    function updateProjectVisibility() {
+      projectFilterItems.forEach((project, index) => {
+        const domains = project.dataset.projectDomains.split(/\s+/);
+        const matchesDomain = selectedProjectDomain === "all" || domains.includes(selectedProjectDomain);
+        const isCollapsed = !projectsExpanded && index >= 6;
+        project.classList.toggle("project-filter-hidden", !matchesDomain || isCollapsed);
+      });
+    }
+
+    if (projectsShowMoreButton) {
+      projectsShowMoreButton.addEventListener("click", () => {
+        projectsExpanded = !projectsExpanded;
+        projectsShowMoreButton.setAttribute("aria-expanded", String(projectsExpanded));
+        const key = projectsExpanded ? "projects.showLess" : "projects.showMore";
+        projectsShowMoreButton.querySelector("span").textContent = I18N[currentLang][key];
+        projectsShowMoreButton.querySelector("i").className = projectsExpanded ? "ri-subtract-line" : "ri-add-line";
+        updateProjectVisibility();
+      });
+    }
+
     projectFilterButtons.forEach(button => {
       button.addEventListener("click", () => {
-        const selectedDomain = button.dataset.projectFilter;
+        selectedProjectDomain = button.dataset.projectFilter;
         projectFilterButtons.forEach(filterButton => {
           const isActive = filterButton === button;
           filterButton.classList.toggle("active", isActive);
@@ -4098,12 +4248,13 @@
 
         projectFilterItems.forEach(project => {
           const domains = project.dataset.projectDomains.split(/\s+/);
-          const matches = selectedDomain === "all" || domains.includes(selectedDomain);
-          project.classList.toggle("project-filter-hidden", !matches);
+          const matches = selectedProjectDomain === "all" || domains.includes(selectedProjectDomain);
+          project.classList.toggle("project-filter-hidden", !matches || (!projectsExpanded && Array.from(projectFilterItems).indexOf(project) >= 6));
         });
 
       });
     });
+    updateProjectVisibility();
 
     // ----------------------------------------------------
     // PROJECT MODAL HANDLERS
@@ -4536,6 +4687,18 @@
         "sec.skillsLabel": "Specialties & Expertise",
         "sec.skillsTitle": "SPECIALTIES & EXPERTISE",
         "sec.skillsSub": "Bridging autonomous multi-agent systems, quantitative RAG pipelines, and distributed event microservices",
+        "skills.languagesCat": "05 / Languages",
+        "skills.languagesTitle": "Languages & Frameworks",
+        "skills.languagesDesc": "Building reliable applications and APIs across Python, Java, JavaScript, and modern backend frameworks.",
+        "skills.dataCat": "06 / Data",
+        "skills.dataTitle": "Data Engineering & BI",
+        "skills.dataDesc": "Transforming raw data into reliable pipelines, analytical models, dashboards, and actionable business insights.",
+        "skills.mlopsCat": "07 / MLOps",
+        "skills.mlopsTitle": "MLOps & Cloud Delivery",
+        "skills.mlopsDesc": "Packaging, testing, and deploying data products with reproducible workflows and cloud-ready infrastructure.",
+        "skills.testingCat": "08 / Quality",
+        "skills.testingTitle": "Testing & Security",
+        "skills.testingDesc": "Designing testable services, automated quality gates, and distributed security monitoring for dependable systems.",
         "about.journeyBadge": "The Journey",
         "about.journeyText": `Final-year Computer Engineering student at the National Engineering School of Sfax (ENIS), seeking a 2027 PFE internship in Data & AI. My projects focus on designing and evaluating multi-agent systems with LangGraph and MCP, as well as RAG pipelines evaluated with RAGAS. I also have hands-on deployment experience with Docker, Kafka, and AWS.`,
         "about.viewPdf": "View CV (PDF)",
@@ -4546,6 +4709,8 @@
         "sec.workLabel": "9+ Featured Engineering Projects",
         "sec.workTitle": "FEATURED PROJECTS",
         "sec.workSub": "Selected projects in multi-agent AI, RAG, cloud systems, and machine learning.",
+        "projects.showMore": "View all",
+        "projects.showLess": "Show less",
         "sec.certsLabel": "Credentials",
         "sec.certsTitle": "CERTIFICATIONS & CREDENTIALS",
         "sec.certsSub": "Official credentials validating competencies in agentic AI, distributed streaming, and software engineering",
@@ -4596,6 +4761,18 @@
         "sec.skillsLabel": "Spécialités & Expertise",
         "sec.skillsTitle": "SPÉCIALITÉS & EXPERTISE",
         "sec.skillsSub": "Conception de systèmes multi-agents autonomes, pipelines RAG quantitatifs et microservices distribués",
+        "skills.languagesCat": "05 / Langages",
+        "skills.languagesTitle": "Langages & Frameworks",
+        "skills.languagesDesc": "Conception d’applications et d’API fiables avec Python, Java, JavaScript et des frameworks backend modernes.",
+        "skills.dataCat": "06 / Données",
+        "skills.dataTitle": "Data Engineering & BI",
+        "skills.dataDesc": "Transformation des données brutes en pipelines fiables, modèles analytiques, tableaux de bord et indicateurs utiles.",
+        "skills.mlopsCat": "07 / MLOps",
+        "skills.mlopsTitle": "MLOps & Déploiement Cloud",
+        "skills.mlopsDesc": "Packaging, tests et déploiement de produits data avec des workflows reproductibles et une infrastructure prête pour le cloud.",
+        "skills.testingCat": "08 / Qualité",
+        "skills.testingTitle": "Tests & Sécurité",
+        "skills.testingDesc": "Conception de services testables, de contrôles qualité automatisés et de systèmes de supervision sécurité distribués.",
         "about.journeyBadge": "Le Parcours",
         "about.journeyText": `Étudiante en dernière année de génie informatique à <b>l'École Nationale d'Ingénieurs de Sfax (ENIS)</b>, je recherche un <b>stage PFE 2027 en Data & AI</b>. Mes projets portent sur la conception et l'évaluation de systèmes multi-agents avec LangGraph et MCP, ainsi que de pipelines RAG mesurés avec RAGAS. J'ai également une expérience pratique du déploiement avec Docker, Kafka et AWS.`,
         "about.viewPdf": "Consulter le CV (PDF)",
@@ -4606,6 +4783,8 @@
         "sec.workLabel": "9+ Projets d'Ingénierie",
         "sec.workTitle": "PROJETS EN VEDETTE",
         "sec.workSub": "Une sélection de projets en IA multi-agents, RAG, cloud et apprentissage automatique.",
+        "projects.showMore": "Voir plus",
+        "projects.showLess": "Réduire",
         "sec.certsLabel": "Certifications",
         "sec.certsTitle": "CERTIFICATIONS & ACCRÉDITATIONS",
         "sec.certsSub": "Certifications officielles validant l'expertise en IA agentique, streaming distribué et ingénierie logicielle",
@@ -4643,24 +4822,39 @@
     };
 
     const PROJECT_SECTION_FR = {
-      ".sw-dash__cat": ["01 / IA agentique", "02 / Recherche", "03 / Streaming", "04 / DevOps"],
+      ".sw-dash__cat": [
+        "01 / IA agentique", "02 / Recherche", "03 / Streaming", "04 / DevOps",
+        "05 / Langages", "06 / Données", "07 / MLOps", "08 / Qualité"
+      ],
       ".sw-dash__title": [
         "Systèmes multi-agents & LangGraph",
         "RAG hybride & évaluation",
         "Architecture événementielle & Kafka",
-        "Déploiement Cloud & Data"
+        "Déploiement Cloud & Data",
+        "Langages & Frameworks",
+        "Data Engineering & BI",
+        "MLOps & Déploiement Cloud",
+        "Tests & Sécurité"
       ],
       ".sw-dash__desc": [
         "Conception de graphes d’agents à état, de routage dynamique avec superviseur, d’outils MCP et de pipelines de tests auto-réparateurs.",
         "Mise en place d’une recherche par fusion de rangs réciproques (BM25 + dense) avec Qdrant/ChromaDB et évaluation scientifique via RAGAS.",
         "Développement de microservices asynchrones coordonnés par Apache Kafka, avec des groupes de consommateurs parallèles et Spring Cloud Gateway.",
-        "Conception de solutions AWS serverless pour la télémétrie (IoT Core, Lambda, DynamoDB) et de pipelines Docker avec CI/CD."
+        "Conception de solutions AWS serverless pour la télémétrie (IoT Core, Lambda, DynamoDB) et de pipelines Docker avec CI/CD.",
+        "Conception d’applications et d’API fiables avec Python, Java, JavaScript et des frameworks backend modernes.",
+        "Transformation des données brutes en pipelines fiables, modèles analytiques, tableaux de bord et indicateurs utiles.",
+        "Packaging, tests et déploiement de produits data avec des workflows reproductibles et une infrastructure prête pour le cloud.",
+        "Conception de services testables, de contrôles qualité automatisés et de systèmes de supervision sécurité distribués."
       ],
       ".sw-dash__chips span": [
         "LangGraph", "MCP (FastMCP)", "Modèle superviseur", "Groq LLaMA 3.3",
         "RAG hybride", "RAGAS (0.941)", "Qdrant", "ChromaDB", "Mistral AI",
         "Apache Kafka", "Spring Boot", "Groupes de consommateurs", "Microservices",
-        "Docker", "AWS IoT Core", "Lambda", "DynamoDB", "GitHub Actions"
+        "Docker", "AWS IoT Core", "Lambda", "DynamoDB", "GitHub Actions",
+        "Python", "Java", "JavaScript", "FastAPI", "Spring Boot", "React",
+        "Pandas", "SQL", "Power BI", "PySpark", "PostgreSQL", "Microsoft Fabric",
+        "Docker", "GitHub Actions", "AWS", "Lambda", "K3s", "CI/CD",
+        "BDD / Cucumber", "JUnit", "RestAssured", "Suricata", "Tailscale", "JaCoCo"
       ],
       ".project-filter-btn[data-project-filter='all']": "Tout",
       ".project-filter-btn[data-project-filter='ai']": "IA",
@@ -4710,7 +4904,7 @@
         "Détails du projet", "Dépôt GitHub", "Dépôt GitHub"
       ],
       "#project-catalog .v-card__actions .v-card__link:nth-child(2)": [
-        "Dépôt GitHub", "Dépôt GitHub", "Dépôt GitHub", "Dépôt GitHub", "Dépôt GitHub", "Dépôt GitHub", "Dépôt GitHub"
+        "Dépôt GitHub", "Dépôt GitHub", "Dépôt GitHub", "Dépôt GitHub", "Dépôt GitHub", "Dépôt GitHub", "Dépôt GitHub", "Dépôt GitHub"
       ],
       "#project-catalog .v-card:nth-child(8) .v-card__tags span": ["Informatique décisionnelle", "Suivi des KPI", "Power BI"],
       "#project-catalog .v-card:nth-child(11) .v-card__tags span:nth-child(4)": "Gestion des tests"
@@ -4896,17 +5090,17 @@
     const HERO_TYPEWRITER_PHRASES = {
       en: [
         "Data & AI · Final-Year Computer Engineering Student",
-        "AI & Data Engineer",
+        "AI & Data Engineer Student",
         "Multi-Agent Systems Builder",
-        "RAG & Evaluation Specialist",
-        "Cloud & Distributed Systems Engineer"
+        "RAG & Evaluation",
+        "Cloud & Distributed Systems Engineer Student"
       ],
       fr: [
         "Data & AI · Étudiante en dernière année de génie informatique",
-        "Ingénieure en IA & Data",
+        "Étudiante ingénieure en IA & Data",
         "Conceptrice de systèmes multi-agents",
-        "Spécialiste RAG & évaluation",
-        "Ingénieure Cloud & systèmes distribués"
+        "RAG & évaluation",
+        "Étudiante ingénieure Cloud & systèmes distribués"
       ]
     };
 
@@ -4961,19 +5155,22 @@
         if (link.hasAttribute("download")) link.setAttribute("download", lang === "fr" ? "Mariem_Kbaier_CV_FR.pdf" : "Mariem_Kbaier_CV_EN.pdf");
       });
 
+      applyProjectLanguage(lang);
       document.querySelectorAll("[data-i18n]").forEach(el => {
         const key = el.getAttribute("data-i18n");
         if (dict[key] !== undefined) {
           el.innerHTML = dict[key];
         }
       });
+      if (projectsShowMoreButton) {
+        projectsShowMoreButton.querySelector("span").textContent = dict[projectsExpanded ? "projects.showLess" : "projects.showMore"];
+      }
 
       document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
         const key = el.getAttribute("data-i18n-placeholder");
         if (dict[key] !== undefined) el.setAttribute("placeholder", dict[key]);
       });
 
-      applyProjectLanguage(lang);
       applyCertificationLanguage(lang);
       applyAchievementLanguage(lang);
 
@@ -5064,13 +5261,21 @@
       "qdrant": "qdrant", "chromadb": "chromadb", "mistral ai": "llm",
       "apache kafka": "kafka", "spring boot": "springboot", "consumer groups": "stream",
       "microservices": "micro", "docker": "docker", "aws iot core": "iot",
-      "lambda": "cloud", "dynamodb": "aws", "github actions": "github"
+      "lambda": "cloud", "dynamodb": "aws", "github actions": "github",
+      "java": "java", "fastapi": "fastapi", "pandas": "ml", "power bi": "powerbi",
+      "postgresql": "postgresql", "aws": "aws", "ci/cd": "github",
+      "bdd / cucumber": "cucumber", "junit": "junit", "swagger": "swagger",
+      "tailscale": "tailscale"
     };
     document.querySelectorAll(".sw-dash__chips span").forEach(tag => {
       const icon = tag.querySelector("i");
       const label = tag.textContent.trim().toLowerCase();
       const iconFile = specialtyIconFiles[label];
-      if (!icon || !iconFile) return;
+      if (!icon) return;
+      if (!iconFile) {
+        icon.remove();
+        return;
+      }
       const image = document.createElement("img");
       image.className = "specialty-brand-icon";
       image.src = `images/tool-icons/${iconFile}.svg`;
