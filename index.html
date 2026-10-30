@@ -1109,6 +1109,7 @@
       object-fit: contain;
       flex: 0 0 auto;
     }
+    [data-theme="light"] .sw-dash__chips img[src*="simpleicons.org"][src$="/ffffff"] { filter: invert(1); }
 
     /* ==================== 3. JOURNEY & TECH STACK ==================== */
     /* ==================== 3. VERTICAL TIMELINE JOURNEY ==================== */
@@ -3318,13 +3319,25 @@
           </div>
 
           <!-- Project: EVA-Guard (in progress) -->
-          <div class="v-card" data-project-domains="qa devops">
+          <div class="v-card" data-project-domains="ai cybersecurity devops">
             <div class="v-card__top">
-              <span class="v-cat-pill">Project</span>
+              <span class="v-cat-pill">Ethereum Security</span>
               <span class="project-status-badge">In progress</span>
             </div>
             <h4 class="v-card__title">EVA-Guard</h4>
-            <p class="v-card__sub">Explore the project and its implementation in the repository.</p>
+            <p class="v-card__sub">Research prototype for monitoring Ethereum nodes: ML detects anomalies, while LLM + RAG agents interpret alerts and correlate multi-source evidence. The README lists a proposed stack; it does not document these integrations as implemented.</p>
+            <div class="v-card__tags" aria-label="Proposed technologies">
+              <span><i class="ri-ethereum-line" aria-hidden="true"></i> Ethereum</span>
+              <span><i class="ri-code-s-slash-line" aria-hidden="true"></i> Python</span>
+              <span><i class="ri-bar-chart-2-line" aria-hidden="true"></i> scikit-learn</span>
+              <span><i class="ri-node-tree" aria-hidden="true"></i> LangGraph</span>
+              <span><i class="ri-links-line" aria-hidden="true"></i> LangChain</span>
+              <span><i class="ri-database-2-line" aria-hidden="true"></i> ChromaDB</span>
+              <span><i class="ri-flashlight-line" aria-hidden="true"></i> FastAPI</span>
+              <span><i class="ri-reactjs-line" aria-hidden="true"></i> React</span>
+              <span><i class="ri-bar-chart-box-line" aria-hidden="true"></i> Pandas</span>
+              <span><i class="ri-git-branch-line" aria-hidden="true"></i> Git</span>
+            </div>
             <div class="v-card__actions">
               <a href="https://github.com/maryem37/EVA-Guard" target="_blank" rel="noopener noreferrer" class="v-card__link">
                 <i class="ri-github-line"></i> Repository
@@ -3492,7 +3505,6 @@
             </div>
             <div class="achieve-card-top">
               <span class="achieve-num">01</span>
-              <span class="achieve-date">Jul — Aug 2026</span>
             </div>
             <div class="achieve-crown-label" style="color:#60A5FA">👑 2ND PLACE / 120+ TALAN</div>
             <h3 class="achieve-title">Talan Summer Camp 2026</h3>
@@ -3511,7 +3523,6 @@
             </div>
             <div class="achieve-card-top">
               <span class="achieve-num">02</span>
-              <span class="achieve-date">2024</span>
             </div>
             <div class="achieve-crown-label" style="color:#38BDF8">🏆 1ST PLACE WINNER</div>
             <h3 class="achieve-title">Non-Technical Challenge</h3>
@@ -3530,7 +3541,6 @@
             </div>
             <div class="achieve-card-top">
               <span class="achieve-num">03</span>
-              <span class="achieve-date">2024 — 2025</span>
             </div>
             <div class="achieve-crown-label" style="color:#60A5FA">🥇 1ST PLACE TEAM WINNER</div>
             <h3 class="achieve-title">TEC.Week 2.0 &amp; 3.0</h3>
@@ -3549,7 +3559,6 @@
             </div>
             <div class="achieve-card-top">
               <span class="achieve-num">04</span>
-              <span class="achieve-date">2024 — 2025</span>
             </div>
             <div class="achieve-crown-label" style="color:#A78BFA">⚡ LEADERSHIP &amp; MEDIA</div>
             <h3 class="achieve-title">IEEE PES Chapter ENIS</h3>
@@ -3568,7 +3577,6 @@
             </div>
             <div class="achieve-card-top">
               <span class="achieve-num">05</span>
-              <span class="achieve-date">2025</span>
             </div>
             <div class="achieve-crown-label" style="color:#4ADE80">💡 HACKATHON &amp; INNOVATION</div>
             <h3 class="achieve-title">PYFAC 11 Innovation</h3>
@@ -3587,7 +3595,6 @@
             </div>
             <div class="achieve-card-top">
               <span class="achieve-num">06</span>
-              <span class="achieve-date">2024</span>
             </div>
             <div class="achieve-crown-label" style="color:#F472B6">🎨 CREATIVE IDENTITY</div>
             <h3 class="achieve-title">PYFAC 10 Design</h3>
@@ -3606,7 +3613,6 @@
             </div>
             <div class="achieve-card-top">
               <span class="achieve-num">07</span>
-              <span class="achieve-date">2026</span>
             </div>
             <div class="achieve-crown-label" style="color:#FB923C">✨ ART DIRECTION</div>
             <h3 class="achieve-title">regenX 1.0</h3>
@@ -3626,7 +3632,6 @@
             </div>
             <div class="achieve-card-top">
               <span class="achieve-num">01</span>
-              <span class="achieve-date">Jul — Aug 2026</span>
             </div>
             <div class="achieve-crown-label" style="color:#60A5FA">👑 2ND PLACE / 120+ TALAN</div>
             <h3 class="achieve-title">Talan Summer Camp 2026</h3>
@@ -3645,7 +3650,6 @@
             </div>
             <div class="achieve-card-top">
               <span class="achieve-num">02</span>
-              <span class="achieve-date">2024</span>
             </div>
             <div class="achieve-crown-label" style="color:#38BDF8">🏆 1ST PLACE WINNER</div>
             <h3 class="achieve-title">Non-Technical Challenge</h3>
@@ -3664,7 +3668,6 @@
             </div>
             <div class="achieve-card-top">
               <span class="achieve-num">03</span>
-              <span class="achieve-date">2024 — 2025</span>
             </div>
             <div class="achieve-crown-label" style="color:#60A5FA">🥇 1ST PLACE TEAM WINNER</div>
             <h3 class="achieve-title">TEC.Week 2.0 &amp; 3.0</h3>
@@ -3683,7 +3686,6 @@
             </div>
             <div class="achieve-card-top">
               <span class="achieve-num">04</span>
-              <span class="achieve-date">2024 — 2025</span>
             </div>
             <div class="achieve-crown-label" style="color:#A78BFA">⚡ LEADERSHIP &amp; MEDIA</div>
             <h3 class="achieve-title">IEEE PES Chapter ENIS</h3>
@@ -3702,7 +3704,6 @@
             </div>
             <div class="achieve-card-top">
               <span class="achieve-num">05</span>
-              <span class="achieve-date">2025</span>
             </div>
             <div class="achieve-crown-label" style="color:#4ADE80">💡 HACKATHON &amp; INNOVATION</div>
             <h3 class="achieve-title">PYFAC 11 Innovation</h3>
@@ -3721,7 +3722,6 @@
             </div>
             <div class="achieve-card-top">
               <span class="achieve-num">06</span>
-              <span class="achieve-date">2024</span>
             </div>
             <div class="achieve-crown-label" style="color:#F472B6">🎨 CREATIVE IDENTITY</div>
             <h3 class="achieve-title">PYFAC 10 Design</h3>
@@ -3740,7 +3740,6 @@
             </div>
             <div class="achieve-card-top">
               <span class="achieve-num">07</span>
-              <span class="achieve-date">2026</span>
             </div>
             <div class="achieve-crown-label" style="color:#FB923C">✨ ART DIRECTION</div>
             <h3 class="achieve-title">regenX 1.0</h3>
@@ -4878,7 +4877,7 @@
       ".project-filter-btn[data-project-filter='cybersecurity']": "Cybersécurité",
       "#project-catalog .v-cat-pill": [
         "Agriculture · IA multi-agents", "IA · Automatisation QA", "MCP & IA agentique", "Cloud sans serveur", "Flux distribués", "Pipeline ML", "RAG privé",
-        "Informatique décisionnelle", "Cybersécurité", "Projet", "Automatisation QA"
+        "Informatique décisionnelle", "Cybersécurité", "Sécurité Ethereum", "Automatisation QA"
       ],
       "#project-catalog .v-card__title": [
         "AgriGuide — Plateforme agricole d’aide à la décision multi-agents",
@@ -4903,7 +4902,7 @@
         "Assistant conversationnel privé pour interroger des PDF complexes, avec recherche ChromaDB, inférence locale via Ollama et recherche Web en option.",
         "En cours de développement : un agent IA surveille les KPI, signale les variations importantes, identifie les produits ou régions concernés et prépare une synthèse pour Power BI.",
         "Système distribué de détection d’intrusions avec Suricata sur trois sites, reliés par Tailscale et déployés avec K3s, avec une réponse réseau via nftables.",
-        "Consultez le projet et son implémentation dans le dépôt.",
+        "Prototype de recherche pour surveiller les nœuds Ethereum : le machine learning détecte les anomalies, puis des agents LLM + RAG interprètent les alertes et corrèlent des preuves multi-sources. Le README décrit une stack envisagée, sans présenter ces intégrations comme réalisées.",
         "Chaîne de bout en bout : exigences → cas de test → export vers un outil de gestion → tests automatisés → intégration continue → rapport de synthèse. Le projet met l’accent sur l’orchestration et la reproductibilité."
       ],
       "#project-catalog .v-card__actions .v-card__link": [
@@ -5220,23 +5219,56 @@
       title.before(icon);
     });
 
-    // Local SVG marks adapted from the icon collection requested by the user:
-    // github.com/emna-kaaniche2003/emna-kaaniche2003.github.io/tree/main/icons
-    const projectToolIconFiles = {
-      "langgraph": "langgraph", "fastapi": "fastapi", "qdrant": "qdrant", "postgis": "postgresql",
-      "gherkin": "cucumber", "docker": "docker", "docker compose": "docker", "swagger": "swagger",
-      "fastmcp": "agent", "tavily": "bm25",
-      "aws iot core": "iot", "lambda": "cloud", "dynamodb": "aws", "websocket": "stream",
-      "apache kafka": "kafka", "spring boot": "springboot", "mysql": "mysql", "xgboost": "xgboost",
-      "scikit-learn": "scikitlearn", "flask": "python", "k-means / dbscan": "ml",
-      "chromadb": "chromadb", "langchain": "langchain",
-      "business intelligence": "ml", "kpi monitoring": "stream", "power bi": "powerbi",
-      "gitlab ci": "git", "github actions": "github", "jenkins": "java", "test management": "junit",
-      "tailscale": "cloud", "nftables": "stream"
+    const SI = (slug, color = "ffffff") => `https://cdn.simpleicons.org/${slug}/${color}`;
+    const DV = (name, variant = "original") =>
+      `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${name}/${name}-${variant}.svg`;
+    const LOCAL = f => `images/tool-icons/${f}.svg`;
+
+    // Fond clair sur ces chips : logos colorés ou sombres uniquement
+    const projectToolLogos = {
+      "langgraph": LOCAL("langgraph"),
+      "ethereum": SI("ethereum", "3C3C3D"),
+      "fastapi": DV("fastapi"),
+      "python": DV("python"),
+      "react": DV("react"),
+      "pandas": DV("pandas"),
+      "git": LOCAL("git"),
+      "mistral ai": SI("mistralai", "FA520F"),
+      "qdrant": LOCAL("qdrant"),
+      "postgis": DV("postgresql"),
+      "gherkin": DV("cucumber"),
+      "docker": DV("docker"),
+      "docker compose": DV("docker"),
+      "swagger": DV("swagger"),
+      "fastmcp": LOCAL("agent"),
+      "apify": SI("apify", "97D700"),
+      "aws iot core": LOCAL("iot"),
+      "lambda": SI("awslambda", "FF9900"),
+      "dynamodb": SI("amazondynamodb", "4053D6"),
+      "websocket": LOCAL("stream"),
+      "apache kafka": SI("apachekafka", "231F20"),
+      "spring boot": DV("spring"),
+      "mysql": DV("mysql"),
+      "xgboost": LOCAL("xgboost"),
+      "scikit-learn": DV("scikitlearn"),
+      "flask": DV("flask"),
+      "k-means / dbscan": LOCAL("ml"),
+      "chromadb": LOCAL("chromadb"),
+      "langchain": LOCAL("langchain"),
+      "ollama": SI("ollama", "000000"),
+      "business intelligence": LOCAL("ml"),
+      "kpi monitoring": LOCAL("stream"),
+      "power bi": SI("powerbi", "F2C811"),
+      "k3s": SI("k3s", "FFC61C"),
+      "tailscale": SI("tailscale", "242424"),
+      "gitlab ci": SI("gitlab", "FC6D26"),
+      "github actions": SI("githubactions", "2088FF"),
+      "jenkins": SI("jenkins", "D24939"),
+      "test management": LOCAL("junit")
     };
+    // Pas de logo officiel fiable : emoji
     const projectToolEmojis = {
-      "suricata": "🛡️", "k3s": "☸️", "ollama": "🦙", "tensorzero": "🎛️",
-      "apify": "🤖", "mistral ai": "✨"
+      "suricata": "🛡️", "tensorzero": "🎛️", "tavily": "🔎", "nftables": "⚙️"
     };
     document.querySelectorAll("#project-catalog .v-card__tags span").forEach(tag => {
       const icon = tag.querySelector("i, .tech-emoji");
@@ -5246,16 +5278,17 @@
         .join("")
         .trim();
       const label = accessibleLabel.toLowerCase();
-      const iconFile = projectToolIconFiles[label];
+      const src = projectToolLogos[label];
       const emoji = projectToolEmojis[label];
       tag.setAttribute("title", accessibleLabel);
       tag.setAttribute("aria-label", accessibleLabel);
       if (!icon) return;
-      if (iconFile) {
+      if (src) {
         const image = document.createElement("img");
         image.className = "tool-brand-icon";
-        image.src = `images/tool-icons/${iconFile}.svg`;
+        image.src = src;
         image.alt = "";
+        image.loading = "lazy";
         image.setAttribute("aria-hidden", "true");
         image.onerror = () => image.replaceWith(icon);
         icon.replaceWith(image);
@@ -5268,31 +5301,58 @@
       }
     });
 
-    const specialtyIconFiles = {
-      "langgraph": "langgraph", "mcp (fastmcp)": "agent", "supervisor pattern": "multiagent",
-      "groq llama 3.3": "groq", "hybrid rag": "rag", "ragas (0.941)": "deeplearning",
-      "qdrant": "qdrant", "chromadb": "chromadb", "mistral ai": "llm",
-      "apache kafka": "kafka", "spring boot": "springboot", "consumer groups": "stream",
-      "microservices": "micro", "docker": "docker", "aws iot core": "iot",
-      "lambda": "cloud", "dynamodb": "aws", "github actions": "github",
-      "java": "java", "fastapi": "fastapi", "pandas": "ml", "power bi": "powerbi",
-      "postgresql": "postgresql", "aws": "aws", "ci/cd": "github",
-      "bdd / cucumber": "cucumber", "junit": "junit", "swagger": "swagger",
-      "tailscale": "tailscale"
+    const specialtyLogos = {
+      "langgraph": SI("langgraph"),
+      "mcp (fastmcp)": "images/tool-icons/agent.svg",
+      "supervisor pattern": "images/tool-icons/multiagent.svg",
+      "groq llama 3.3": "images/tool-icons/groq.svg",
+      "hybrid rag": "images/tool-icons/rag.svg",
+      "ragas (0.941)": "images/tool-icons/deeplearning.svg",
+      "qdrant": "images/tool-icons/qdrant.svg",
+      "chromadb": "images/tool-icons/chromadb.svg",
+      "mistral ai": SI("mistralai", "FA520F"),
+      "apache kafka": SI("apachekafka"),
+      "spring boot": DV("spring"),
+      "consumer groups": "images/tool-icons/stream.svg",
+      "microservices": "images/tool-icons/micro.svg",
+      "docker": DV("docker"),
+      "aws iot core": "images/tool-icons/iot.svg",
+      "lambda": DV("amazonwebservices", "plain-wordmark"),
+      "dynamodb": DV("amazonwebservices", "plain-wordmark"),
+      "aws": DV("amazonwebservices", "plain-wordmark"),
+      "github actions": SI("githubactions", "2088FF"),
+      "ci/cd": SI("githubactions", "2088FF"),
+      "python": DV("python"),
+      "java": DV("java"),
+      "javascript": DV("javascript"),
+      "fastapi": DV("fastapi"),
+      "react": DV("react"),
+      "pandas": DV("pandas"),
+      "sql": DV("azuresqldatabase"),
+      "power bi": SI("powerbi", "F2C811"),
+      "pyspark": DV("apachespark"),
+      "postgresql": DV("postgresql"),
+      "microsoft fabric": SI("microsoftfabric", "ffffff"),
+      "k3s": SI("k3s", "FFC61C"),
+      "bdd / cucumber": DV("cucumber"),
+      "junit": DV("junit"),
+      "restassured": SI("postman", "FF6C37"),
+      "suricata": null,
+      "tailscale": SI("tailscale"),
+      "jacoco": null
     };
+
     document.querySelectorAll(".sw-dash__chips span").forEach(tag => {
       const icon = tag.querySelector("i");
-      const label = tag.textContent.trim().toLowerCase();
-      const iconFile = specialtyIconFiles[label];
       if (!icon) return;
-      if (!iconFile) {
-        icon.remove();
-        return;
-      }
+      const key = (tag.dataset.projectEnglishText || tag.textContent).trim().toLowerCase();
+      const src = specialtyLogos[key];
+      if (!src) return;
       const image = document.createElement("img");
       image.className = "specialty-brand-icon";
-      image.src = `images/tool-icons/${iconFile}.svg`;
+      image.src = src;
       image.alt = "";
+      image.loading = "lazy";
       image.setAttribute("aria-hidden", "true");
       image.onerror = () => image.replaceWith(icon);
       icon.replaceWith(image);
