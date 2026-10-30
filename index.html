@@ -2043,6 +2043,62 @@
       overflow: hidden;
     }
     .connect-inner::before { content: ''; position: absolute; width: 340px; height: 340px; border-radius: 50%; top: -220px; right: -100px; background: var(--accent-gold-soft); filter: blur(10px); pointer-events: none; }
+    .connect-particles { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+    .connect-particles span {
+      position: absolute;
+      left: var(--dot-x);
+      top: var(--dot-y);
+      width: var(--dot-size, 4px);
+      height: var(--dot-size, 4px);
+      border-radius: 50%;
+      background: #3B82F6;
+      box-shadow: 0 0 14px rgba(59, 130, 246, 1), 0 0 26px rgba(59, 130, 246, .55);
+      opacity: .72;
+      will-change: transform, opacity;
+      animation: contact-dot-drift var(--dot-duration, 8s) ease-in-out var(--dot-delay, 0s) infinite alternate;
+    }
+    .connect-particles span:nth-child(1) { --dot-x: 6%; --dot-y: 16%; --drift-x: 72px; --drift-y: 84px; --dot-duration: 10s; }
+    .connect-particles span:nth-child(2) { --dot-x: 14%; --dot-y: 74%; --drift-x: -64px; --drift-y: -76px; --dot-size: 2px; --dot-duration: 13s; --dot-delay: -8s; }
+    .connect-particles span:nth-child(3) { --dot-x: 25%; --dot-y: 35%; --drift-x: 88px; --drift-y: -62px; --dot-duration: 11s; --dot-delay: -13s; }
+    .connect-particles span:nth-child(4) { --dot-x: 34%; --dot-y: 86%; --drift-x: -78px; --drift-y: -88px; --dot-size: 4px; --dot-duration: 14s; --dot-delay: -5s; }
+    .connect-particles span:nth-child(5) { --dot-x: 43%; --dot-y: 18%; --drift-x: 62px; --drift-y: 80px; --dot-size: 2px; --dot-duration: 9s; --dot-delay: -10s; }
+    .connect-particles span:nth-child(6) { --dot-x: 53%; --dot-y: 62%; --drift-x: -90px; --drift-y: 58px; --dot-duration: 12s; --dot-delay: -16s; }
+    .connect-particles span:nth-child(7) { --dot-x: 62%; --dot-y: 42%; --drift-x: 76px; --drift-y: -82px; --dot-size: 2px; --dot-duration: 10s; --dot-delay: -4s; }
+    .connect-particles span:nth-child(8) { --dot-x: 72%; --dot-y: 12%; --drift-x: -68px; --drift-y: 94px; --dot-duration: 13s; --dot-delay: -12s; }
+    .connect-particles span:nth-child(9) { --dot-x: 80%; --dot-y: 84%; --drift-x: 92px; --drift-y: -72px; --dot-size: 4px; --dot-duration: 11s; --dot-delay: -7s; }
+    .connect-particles span:nth-child(10) { --dot-x: 91%; --dot-y: 26%; --drift-x: -84px; --drift-y: 64px; --dot-size: 2px; --dot-duration: 9s; --dot-delay: -15s; }
+    .connect-particles span:nth-child(11) { --dot-x: 19%; --dot-y: 48%; --drift-x: 58px; --drift-y: 92px; --dot-duration: 14s; --dot-delay: -3s; }
+    .connect-particles span:nth-child(12) { --dot-x: 46%; --dot-y: 70%; --drift-x: -96px; --drift-y: -56px; --dot-size: 2px; --dot-duration: 10s; --dot-delay: -11s; }
+    .connect-particles span:nth-child(13) { --dot-x: 77%; --dot-y: 52%; --drift-x: 68px; --drift-y: -98px; --dot-duration: 13s; --dot-delay: -18s; }
+    .connect-particles span:nth-child(14) { --dot-x: 97%; --dot-y: 72%; --drift-x: -62px; --drift-y: -86px; --dot-size: 2px; --dot-duration: 11s; --dot-delay: -9s; }
+    .connect-particles span:nth-child(15) { --dot-x: 11%; --dot-y: 89%; --drift-x: 84px; --drift-y: -62px; --dot-duration: 12s; --dot-delay: -6s; }
+    .connect-particles span:nth-child(16) { --dot-x: 29%; --dot-y: 8%; --drift-x: -74px; --drift-y: 96px; --dot-size: 2px; --dot-duration: 14s; --dot-delay: -12s; }
+    .connect-particles span:nth-child(17) { --dot-x: 39%; --dot-y: 54%; --drift-x: 98px; --drift-y: 62px; --dot-duration: 9s; --dot-delay: -2s; }
+    .connect-particles span:nth-child(18) { --dot-x: 57%; --dot-y: 25%; --drift-x: -88px; --drift-y: -70px; --dot-size: 2px; --dot-duration: 12s; --dot-delay: -14s; }
+    .connect-particles span:nth-child(19) { --dot-x: 66%; --dot-y: 91%; --drift-x: 64px; --drift-y: -92px; --dot-duration: 13s; --dot-delay: -5s; }
+    .connect-particles span:nth-child(20) { --dot-x: 88%; --dot-y: 48%; --drift-x: -100px; --drift-y: 74px; --dot-size: 2px; --dot-duration: 10s; --dot-delay: -17s; }
+    .connect-particles span:nth-child(21) { --dot-x: 4%; --dot-y: 52%; --drift-x: 118px; --drift-y: -92px; --dot-duration: 7s; --dot-delay: -4s; }
+    .connect-particles span:nth-child(22) { --dot-x: 22%; --dot-y: 22%; --drift-x: -105px; --drift-y: 115px; --dot-size: 2px; --dot-duration: 9s; --dot-delay: -6s; }
+    .connect-particles span:nth-child(23) { --dot-x: 48%; --dot-y: 92%; --drift-x: 112px; --drift-y: -108px; --dot-duration: 8s; --dot-delay: -2s; }
+    .connect-particles span:nth-child(24) { --dot-x: 69%; --dot-y: 68%; --drift-x: -120px; --drift-y: -95px; --dot-size: 2px; --dot-duration: 7s; --dot-delay: -5s; }
+    .connect-particles span:nth-child(25) { --dot-x: 84%; --dot-y: 8%; --drift-x: 96px; --drift-y: 120px; --dot-duration: 9s; --dot-delay: -7s; }
+    .connect-particles span:nth-child(26) { --dot-x: 96%; --dot-y: 93%; --drift-x: -110px; --drift-y: -112px; --dot-size: 2px; --dot-duration: 8s; --dot-delay: -3s; }
+    .connect-particles span:nth-child(27) { --dot-x: 9%; --dot-y: 31%; --drift-x: 104px; --drift-y: 104px; --dot-size: 2px; --dot-duration: 8s; --dot-delay: -6s; }
+    .connect-particles span:nth-child(28) { --dot-x: 31%; --dot-y: 68%; --drift-x: -112px; --drift-y: -84px; --dot-duration: 9s; --dot-delay: -3s; }
+    .connect-particles span:nth-child(29) { --dot-x: 42%; --dot-y: 43%; --drift-x: 120px; --drift-y: -104px; --dot-size: 2px; --dot-duration: 7s; --dot-delay: -5s; }
+    .connect-particles span:nth-child(30) { --dot-x: 59%; --dot-y: 83%; --drift-x: -98px; --drift-y: -112px; --dot-duration: 8s; --dot-delay: -7s; }
+    .connect-particles span:nth-child(31) { --dot-x: 74%; --dot-y: 32%; --drift-x: 112px; --drift-y: 96px; --dot-size: 2px; --dot-duration: 9s; --dot-delay: -2s; }
+    .connect-particles span:nth-child(32) { --dot-x: 93%; --dot-y: 57%; --drift-x: -118px; --drift-y: -108px; --dot-duration: 7s; --dot-delay: -4s; }
+    .connect-particles span:nth-child(33) { --dot-x: 16%; --dot-y: 96%; --drift-x: 100px; --drift-y: -116px; --dot-size: 2px; --dot-duration: 8s; --dot-delay: -1s; }
+    .connect-particles span:nth-child(34) { --dot-x: 81%; --dot-y: 96%; --drift-x: -104px; --drift-y: -120px; --dot-duration: 9s; --dot-delay: -8s; }
+    @keyframes contact-dot-drift {
+      0%, 100% { transform: translate3d(0, 0, 0) scale(.8); opacity: .35; }
+      50% { transform: translate3d(var(--drift-x), var(--drift-y), 0) scale(1.45); opacity: 1; }
+    }
+    .connect-left-column, .connect-form-column, .footer-copyright { position: relative; z-index: 1; }
+    @media (prefers-reduced-motion: reduce) {
+      .connect-particles span { animation-duration: 18s !important; }
+    }
 
     .connect-header {
       text-align: center;
@@ -3766,6 +3822,15 @@
     <section class="section connect-section" id="contact">
       <div class="container">
         <div class="connect-inner">
+          <div class="connect-particles" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+          </div>
           <div class="connect-left-column">
           <div class="connect-header">
             <div class="wa-badge">
