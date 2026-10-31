@@ -2822,6 +2822,39 @@
       .connect-headline { font-size: var(--fs-2xl); }
     }
 
+    /* Skills matrix */
+    .skills-open-btn { display: inline-flex; align-items: center; justify-content:center; gap: .55rem; color: var(--accent-gold-bright); border: 1px solid var(--accent-gold); background: var(--accent-gold-soft); border-radius: 999px; padding: .8rem 1.1rem; font: inherit; font-weight: 700; cursor: pointer; transition: .2s ease; }
+    .skills-open-btn:hover { background: var(--accent-gold); color: #fff; transform: translateY(-2px); }
+    .skills-modal { position: fixed; inset: 0; z-index: 10000; display: grid; place-items: center; padding: 1rem; background: rgba(5, 9, 18, .78); backdrop-filter: blur(10px); opacity: 0; visibility: hidden; transition: .25s ease; }
+    .skills-modal.is-open { opacity: 1; visibility: visible; }
+    .skills-panel { width: min(1040px, 100%); max-height: min(760px, 90vh); overflow: hidden; display: flex; flex-direction: column; border: 1px solid rgba(59,130,246,.24); border-radius: 24px; background: var(--bg-surface-elevated); box-shadow: 0 30px 100px #0008; transform: translateY(12px); transition: .25s ease; }
+    .skills-modal.is-open .skills-panel { transform: translateY(0); }
+    .skills-panel__head { display:flex; align-items:center; gap: .9rem; padding: 1.2rem 1.5rem; border-bottom:1px solid var(--surface-3); }
+    .skills-panel__mark { display:grid; place-items:center; width:44px; height:44px; border-radius:14px; color:#fff; background:linear-gradient(135deg,#3b82f6,#06b6d4); font-size:1.35rem; }
+    .skills-panel__head h2 { margin:0; font-size:1.25rem; }
+    .skills-panel__head p { margin:.2rem 0 0; color:var(--text-muted); font-size:.88rem; }
+    .skills-panel__close { margin-left:auto; border:0; color:var(--text-muted); background:none; font-size:1.6rem; cursor:pointer; }
+    .skills-panel__body { min-height:420px; display:grid; grid-template-columns:230px minmax(280px,1fr) 250px; overflow:auto; }
+    .skills-tabs { display:flex; flex-direction:column; gap:.35rem; padding:1rem; border-right:1px solid var(--surface-3); }
+    .skills-tab { text-align:left; padding:.8rem .9rem; border:1px solid transparent; border-radius:13px; color:var(--text-muted); background:transparent; font:inherit; font-weight:700; cursor:pointer; }
+    .skills-tab:hover,.skills-tab[aria-selected="true"] { color:var(--accent-gold-bright); border-color:var(--accent-gold); background:var(--accent-gold-soft); }
+    .skills-content { padding:clamp(1.2rem,2vw,1.7rem); align-self:center; }
+    .skills-content h3 { margin:0 0 .5rem; font-size:1.15rem; }
+    .skills-content p { margin:0 0 1rem; color:var(--text-muted); line-height:1.6; font-size:.84rem; }
+    .skills-chip-list { display:flex; flex-direction:column; gap:.55rem; }
+    .skills-chip { display:flex; align-items:center; gap:.6rem; padding:.7rem .85rem; border:1px solid var(--accent-gold-soft); border-radius:12px; color:var(--text-primary); background:var(--accent-gold-soft); font-size:.88rem; }
+    .skills-chip i { color:var(--accent-gold-bright); }
+    .skills-radar { grid-column:2; grid-row:1; align-self:center; justify-self:center; width:min(100%,340px); padding:1rem .4rem; color:var(--text-muted); }
+    .skills-radar svg { width:100%; overflow:visible; }
+    .skills-radar polygon.grid { fill:none; stroke:var(--text-muted); stroke-opacity:.2; stroke-dasharray:3 4; }
+    .skills-radar line { stroke:var(--text-muted); stroke-opacity:.18; }
+    .skills-radar polygon.data { fill:var(--accent-gold); fill-opacity:.18; stroke:var(--accent-gold-bright); stroke-width:2.5; stroke-linejoin:round; transition:all .35s ease; }
+    .skills-radar circle { fill:var(--accent-gold-bright); }
+    .skills-radar text { fill:var(--text-muted); font:11px 'Plus Jakarta Sans',sans-serif; }
+    .skills-radar__caption { margin:.5rem 0 0; text-align:center; font-size:.72rem; line-height:1.5; }
+    @media(max-width:800px) { .skills-panel__body { grid-template-columns:200px minmax(240px,1fr); } .skills-radar { grid-column:2; grid-row:1; width:min(100%,300px); } .skills-content { grid-column:2; grid-row:2; } }
+    @media(max-width:640px) { .skills-panel__body { grid-template-columns:1fr; min-height:0; } .skills-tabs { flex-direction:row; overflow-x:auto; border-right:0; border-bottom:1px solid var(--surface-3); } .skills-tab { white-space:nowrap; } .skills-content { grid-column:1; grid-row:3; min-height:180px; } .skills-chip-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); } .skills-radar { grid-column:1; grid-row:2; width:min(300px,90%); } }
+
   </style>
 </head>
 
@@ -2904,6 +2937,7 @@
             <a href="#projects" class="btn btn-outline" data-i18n="hero.viewProjects">
               <i class="ri-folder-open-line"></i> <span>View Projects</span>
             </a>
+            <button class="skills-open-btn" type="button" id="skills-open"><i class="ri-bar-chart-box-line" aria-hidden="true"></i> Skills Matrix</button>
           </div>
 
           <!-- Hero Social Capsules -->
@@ -4076,6 +4110,14 @@
   </div>
 
   <!-- ==================== PHOTO LIGHTBOX MODAL ==================== -->
+  <div class="skills-modal" id="skills-modal" aria-hidden="true">
+    <section class="skills-panel" role="dialog" aria-modal="true" aria-labelledby="skills-title">
+      <header class="skills-panel__head"><span class="skills-panel__mark"><i class="ri-code-s-slash-line"></i></span><div><h2 id="skills-title">Skills Matrix</h2><p>Technical skills across my focus areas</p></div><button class="skills-panel__close" id="skills-close" type="button" aria-label="Close skills matrix">&times;</button></header>
+      <div class="skills-panel__body"><nav class="skills-tabs" role="tablist" aria-label="Skill categories" id="skills-tabs"></nav><aside class="skills-radar" aria-label="Skills in selected category"><svg viewBox="0 0 240 240" role="img" aria-labelledby="skills-radar-title"><title id="skills-radar-title">Relative portfolio emphasis by skill</title><g id="skills-radar-grid"></g><polygon class="data" id="skills-radar-data" points=""></polygon><g id="skills-radar-dots"></g><g id="skills-radar-labels"></g></svg><p class="skills-radar__caption">Relative project emphasis · visual guide</p></aside><div class="skills-content" id="skills-content" role="tabpanel" tabindex="0"></div></div>
+    </section>
+  </div>
+
+  <!-- ==================== PHOTO LIGHTBOX MODAL ==================== -->
   <div class="lightbox-modal" id="photo-modal" role="dialog" aria-modal="true" aria-label="Photo gallery">
     <div class="lightbox-top">
       <div class="lightbox-info">
@@ -4097,6 +4139,67 @@
 
   <!-- ==================== SCRIPT ==================== -->
   <script>
+    // ----------------------------------------------------
+    // SKILLS MATRIX
+    // ----------------------------------------------------
+    (() => {
+      const groups = [
+        { title: 'AI & Multi-Agent Systems', icon: 'ri-robot-2-line', skills: ['LangGraph', 'MCP / FastMCP', 'Supervisor Pattern', 'Groq LLaMA 3.3', 'Mistral AI'], emphasis: [5, 4, 4, 3, 3] },
+        { title: 'RAG & Evaluation', icon: 'ri-search-eye-line', skills: ['Hybrid RAG', 'BM25 + Dense Retrieval', 'RAGAS', 'Qdrant', 'ChromaDB'], emphasis: [5, 4, 5, 4, 3] },
+        { title: 'Backend & Streaming', icon: 'ri-git-merge-line', skills: ['Python', 'Java', 'FastAPI', 'Spring Boot', 'Apache Kafka', 'Microservices'], emphasis: [5, 3, 4, 3, 4, 4] },
+        { title: 'Data & BI', icon: 'ri-bar-chart-box-line', skills: ['Pandas', 'SQL', 'PySpark', 'PostgreSQL', 'Power BI', 'Microsoft Fabric'], emphasis: [4, 5, 3, 4, 3, 2] },
+        { title: 'Cloud & DevOps', icon: 'ri-cloud-line', skills: ['Docker', 'AWS', 'AWS IoT Core', 'Lambda', 'DynamoDB', 'GitHub Actions', 'K3s', 'CI/CD'], emphasis: [5, 4, 3, 4, 3, 4, 2, 3] },
+        { title: 'Testing & Security', icon: 'ri-shield-check-line', skills: ['BDD / Cucumber', 'JUnit', 'RestAssured', 'JaCoCo', 'Suricata', 'Tailscale'], emphasis: [4, 3, 3, 2, 3, 2] },
+        { title: 'Frontend', icon: 'ri-code-s-slash-line', skills: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Responsive Design'], emphasis: [3, 3, 3, 2, 2, 2] }
+      ];
+      const modal = document.getElementById('skills-modal');
+      const open = document.getElementById('skills-open');
+      const close = document.getElementById('skills-close');
+      const tabs = document.getElementById('skills-tabs');
+      const content = document.getElementById('skills-content');
+      const radarGrid = document.getElementById('skills-radar-grid');
+      const radarData = document.getElementById('skills-radar-data');
+      const radarDots = document.getElementById('skills-radar-dots');
+      const radarLabels = document.getElementById('skills-radar-labels');
+      if (!modal || !open || !close || !tabs || !content) return;
+      let selected = 0;
+      const cx = 120, cy = 112, radius = 72;
+      const angleAt = (i, count) => -Math.PI / 2 + (Math.PI * 2 * i / count);
+      const pointAt = (i, r, count) => `${(cx + Math.cos(angleAt(i, count)) * r).toFixed(1)},${(cy + Math.sin(angleAt(i, count)) * r).toFixed(1)}`;
+      const renderRadar = () => {
+        const skills = groups[selected].skills;
+        const count = skills.length;
+        radarGrid.innerHTML = Array.from({ length: 4 }, (_, ring) => {
+          const r = radius * (ring + 1) / 4;
+          return `<polygon class="grid" points="${skills.map((_, i) => pointAt(i, r, count)).join(' ')}"></polygon>`;
+        }).join('') + skills.map((_, i) => { const [x, y] = pointAt(i, radius, count).split(','); return `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}"></line>`; }).join('');
+        const profile = groups[selected].emphasis;
+        radarData.setAttribute('points', skills.map((_, i) => pointAt(i, radius * profile[i] / 5, count)).join(' '));
+        radarDots.innerHTML = skills.map((_, i) => { const [x, y] = pointAt(i, radius * profile[i] / 5, count).split(','); return `<circle cx="${x}" cy="${y}" r="3.5"></circle>`; }).join('');
+        radarLabels.innerHTML = skills.map((skill, i) => {
+          const angle = angleAt(i, count), x = cx + Math.cos(angle) * (radius + 17), y = cy + Math.sin(angle) * (radius + 17);
+          const anchor = Math.abs(Math.cos(angle)) < .3 ? 'middle' : Math.cos(angle) > 0 ? 'start' : 'end';
+          const short = skill.length > 17 ? skill.slice(0, 15) + '…' : skill;
+          return `<text x="${x.toFixed(1)}" y="${(y + 3).toFixed(1)}" text-anchor="${anchor}">${short}</text>`;
+        }).join('');
+      };
+      const render = () => {
+        tabs.innerHTML = groups.map((group, i) => `<button class="skills-tab" type="button" role="tab" id="skills-tab-${i}" aria-controls="skills-content" aria-selected="${i === selected}" tabindex="${i === selected ? 0 : -1}" data-index="${i}"><i class="${group.icon}" aria-hidden="true"></i> &nbsp;${group.title}</button>`).join('');
+        const group = groups[selected];
+        content.setAttribute('aria-labelledby', `skills-tab-${selected}`);
+        content.innerHTML = `<h3>${group.title}</h3><p>Tools and technologies I use across my projects.</p><div class="skills-chip-list">${group.skills.map(skill => `<span class="skills-chip"><i class="${group.icon}" aria-hidden="true"></i>${skill}</span>`).join('')}</div>`;
+        renderRadar();
+      };
+      const show = () => { render(); modal.classList.add('is-open'); modal.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; close.focus(); };
+      const hide = () => { modal.classList.remove('is-open'); modal.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; open.focus(); };
+      open.addEventListener('click', show);
+      close.addEventListener('click', hide);
+      modal.addEventListener('click', event => { if (event.target === modal) hide(); });
+      tabs.addEventListener('click', event => { const button = event.target.closest('[data-index]'); if (button) { selected = Number(button.dataset.index); render(); document.getElementById(`skills-tab-${selected}`).focus(); } });
+      document.addEventListener('keydown', event => { if (event.key === 'Escape' && modal.classList.contains('is-open')) hide(); });
+      render();
+    })();
+
     // ----------------------------------------------------
     // PERSISTENT LIGHT / DARK THEME
     // ----------------------------------------------------
