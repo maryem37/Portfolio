@@ -963,6 +963,57 @@
       gap: 2rem;
     }
 
+    /* Compact achievements strip, matching the portfolio's blue visual system. */
+    .achievement-glance {
+      margin-top: clamp(2.75rem, 5vw, 4.25rem);
+      overflow: hidden;
+      border: 1px solid rgba(59, 130, 246, 0.13);
+      border-radius: var(--r-lg);
+      background: linear-gradient(115deg, rgba(59, 130, 246, 0.055), rgba(34, 197, 94, 0.045));
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+    .achievement-glance__item {
+      --metric-color: #3B82F6;
+      min-height: 164px;
+      padding: 1.5rem 0.75rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .achievement-glance__item + .achievement-glance__item { border-left: 1px solid rgba(59, 130, 246, 0.08); }
+    .achievement-glance__item:nth-child(2) { --metric-color: #F59E0B; }
+    .achievement-glance__item:nth-child(3) { --metric-color: #22C55E; }
+    .achievement-glance__item:nth-child(4) { --metric-color: #06B6D4; }
+    .achievement-glance__item:nth-child(5) { --metric-color: #F43F5E; }
+    .achievement-glance__item:nth-child(6) { --metric-color: #8B5CF6; }
+    .achievement-glance__icon { color: var(--metric-color); font-size: 1.4rem; line-height: 1; margin-bottom: 0.8rem; }
+    .achievement-glance__value {
+      color: var(--text-primary);
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 2.4vw, 2.45rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.035em;
+      font-variant-numeric: tabular-nums;
+    }
+    .achievement-glance__label { color: var(--text-muted); font-size: var(--fs-sm); font-weight: 700; line-height: 1.35; margin-top: 0.55rem; }
+    @media (max-width: 900px) {
+      .achievement-glance { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .achievement-glance__item:nth-child(4) { border-left: 0; }
+      .achievement-glance__item:nth-child(n+4) { border-top: 1px solid rgba(59, 130, 246, 0.08); }
+    }
+    @media (max-width: 480px) {
+      .achievement-glance__item { min-height: 132px; padding: 1.1rem 0.4rem; }
+      .achievement-glance__value { font-size: 1.75rem; }
+      .achievement-glance__label { font-size: 0.72rem; }
+    }
+    [data-theme="light"] .achievement-glance { background: linear-gradient(115deg, #f0f8f5, #eff8fa); border-color: #e0f0ea; }
+    [data-theme="light"] .achievement-glance__item + .achievement-glance__item,
+    [data-theme="light"] .achievement-glance__item:nth-child(n+4) { border-color: #e4f0ed; }
+
     .about-overview-card {
       background: var(--bg-surface);
       border: 1px solid var(--border-light);
@@ -2890,6 +2941,39 @@
     <!-- ==================== 2. ABOUT & SPECIALTIES DASHBOARD ==================== -->
     <section class="section about-section" id="about">
       <div class="container">
+        <div class="achievement-glance" id="achievement-glance" aria-label="Achievements at a glance">
+          <div class="achievement-glance__item">
+            <i class="achievement-glance__icon ri-lightbulb-line" aria-hidden="true"></i>
+            <span class="achievement-glance__value" data-count="8" data-suffix="+">0</span>
+            <span class="achievement-glance__label" data-i18n="stats.specialties">Specialties</span>
+          </div>
+          <div class="achievement-glance__item">
+            <i class="achievement-glance__icon ri-folder-open-line" aria-hidden="true"></i>
+            <span class="achievement-glance__value" data-count="37" data-format="grouped" data-suffix="">0</span>
+            <span class="achievement-glance__label" data-i18n="stats.projects">GitHub repositories</span>
+          </div>
+          <div class="achievement-glance__item">
+            <i class="achievement-glance__icon ri-award-line" aria-hidden="true"></i>
+            <span class="achievement-glance__value" data-count="22" data-format="grouped" data-suffix="">0</span>
+            <span class="achievement-glance__label" data-i18n="stats.certifications">Certifications earned</span>
+          </div>
+          <div class="achievement-glance__item">
+            <i class="achievement-glance__icon ri-briefcase-line" aria-hidden="true"></i>
+            <span class="achievement-glance__value" data-count="2" data-suffix="">0</span>
+            <span class="achievement-glance__label" data-i18n="stats.internships">Internships</span>
+          </div>
+          <div class="achievement-glance__item">
+            <i class="achievement-glance__icon ri-medal-line" aria-hidden="true"></i>
+            <span class="achievement-glance__value" data-count="3" data-suffix="">0</span>
+            <span class="achievement-glance__label" data-i18n="stats.awards">Awards</span>
+          </div>
+          <div class="achievement-glance__item">
+            <i class="achievement-glance__icon ri-linkedin-box-line" aria-hidden="true"></i>
+            <span class="achievement-glance__value" data-count="1857" data-format="grouped" data-suffix="">0</span>
+            <span class="achievement-glance__label" data-i18n="stats.followers">LinkedIn followers</span>
+          </div>
+        </div>
+
         <div class="section-title-wrap">
           <div class="stat-counter-badge">
             <i class="ri-dashboard-3-line"></i> <span data-i18n="sec.skillsLabel">Specialties &amp; Expertise</span>
@@ -4774,6 +4858,12 @@
         "hero.scroll": "Scroll Down",
         "sec.skillsLabel": "Specialties & Expertise",
         "sec.skillsTitle": "SPECIALTIES & EXPERTISE",
+        "stats.specialties": "Specialties",
+        "stats.projects": "GitHub repositories",
+        "stats.certifications": "Licenses & certifications",
+        "stats.internships": "Internships",
+        "stats.awards": "Awards",
+        "stats.followers": "LinkedIn followers",
         "sec.skillsSub": "Bridging autonomous multi-agent systems, quantitative RAG pipelines, and distributed event microservices",
         "skills.languagesCat": "05 / Languages",
         "skills.languagesTitle": "Languages & Frameworks",
@@ -4848,6 +4938,12 @@
         "hero.scroll": "Faire défiler",
         "sec.skillsLabel": "Spécialités & Expertise",
         "sec.skillsTitle": "SPÉCIALITÉS & EXPERTISE",
+        "stats.specialties": "Spécialités",
+        "stats.projects": "Dépôts GitHub",
+        "stats.certifications": "Licences et certifications",
+        "stats.internships": "Stages",
+        "stats.awards": "Distinctions",
+        "stats.followers": "Abonnés LinkedIn",
         "sec.skillsSub": "Conception de systèmes multi-agents autonomes, pipelines RAG quantitatifs et microservices distribués",
         "skills.languagesCat": "05 / Langages",
         "skills.languagesTitle": "Langages & Frameworks",
@@ -5135,6 +5231,38 @@
     }
 
     let currentLang = localStorage.getItem("lang") || "en";
+
+    // Count up once when the achievements strip enters the viewport.
+    const achievementCounters = document.querySelectorAll("#achievement-glance [data-count]");
+    const countAchievement = (element) => {
+      const target = Number(element.dataset.count);
+      const suffix = element.dataset.suffix || "";
+      const duration = Math.min(2600, Math.max(1300, target * 1.1));
+      const start = performance.now();
+      const frame = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const value = Math.round(target * eased);
+        const locale = currentLang === "fr" ? "fr-FR" : "en-US";
+        const formatted = element.dataset.format === "grouped"
+          ? new Intl.NumberFormat(locale).format(value)
+          : String(value);
+        element.textContent = `${formatted}${suffix}`;
+        if (progress < 1) requestAnimationFrame(frame);
+      };
+      requestAnimationFrame(frame);
+    };
+    if ("IntersectionObserver" in window) {
+      const achievementObserver = new IntersectionObserver((entries, observer) => {
+        if (!entries.some(entry => entry.isIntersecting)) return;
+        achievementCounters.forEach(countAchievement);
+        observer.disconnect();
+      }, { threshold: 0.25 });
+      const achievementSection = document.getElementById("achievement-glance");
+      if (achievementSection) achievementObserver.observe(achievementSection);
+    } else {
+      achievementCounters.forEach(countAchievement);
+    }
 
     // Scroll-revealed journey timeline and scroll-linked glow rail
     const journeyTimeline = document.querySelector(".timeline");
