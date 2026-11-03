@@ -3385,7 +3385,7 @@
       <div class="container">
         <div class="section-title-wrap">
           <div class="stat-counter-badge">
-            <i class="ri-code-box-fill"></i> <span data-i18n="sec.workLabel">9+ Featured Engineering Projects</span>
+            <i class="ri-code-box-fill"></i> <span data-i18n="sec.workLabel">10+ Featured Engineering Projects</span>
           </div>
           <h2 class="section-title" data-i18n="sec.workTitle">FEATURED PROJECTS</h2>
           <p class="section-subtitle" data-i18n="sec.workSub">Selected projects in multi-agent AI, RAG, cloud systems, and machine learning.</p>
@@ -3606,6 +3606,29 @@
               <span class="v-card__link"><i class="ri-file-info-line"></i> Project Details</span>
               <a href="https://github.com/kammounimen/FogWatch" target="_blank" rel="noopener noreferrer" class="v-card__link" onclick="event.stopPropagation()">
                 <i class="ri-github-line"></i> Repository
+              </a>
+            </div>
+          </div>
+
+          <!-- Project: Enterprise Data Warehouse -->
+          <div class="v-card" data-project-domains="data" onclick="openProjectModal(9)">
+            <div class="v-card__top">
+              <span class="v-cat-pill">Data Engineering · Business Intelligence</span>
+              <span class="v-brand-pill">SQL Server · Medallion</span>
+            </div>
+            <h4 class="v-card__title">Enterprise Data Warehouse &amp; Analytics</h4>
+            <p class="v-card__sub">An end-to-end SQL Server warehouse that integrates ERP and CRM data through Bronze, Silver, and Gold layers, a star schema, quality checks, and analytics-ready views.</p>
+            <div class="v-card__tags" aria-label="Technologies">
+              <span><i class="ri-database-2-line" aria-hidden="true"></i> SQL Server</span>
+              <span><i class="ri-git-branch-line" aria-hidden="true"></i> Medallion Architecture</span>
+              <span><i class="ri-bar-chart-box-line" aria-hidden="true"></i> Star Schema</span>
+              <span><i class="ri-file-chart-line" aria-hidden="true"></i> ETL / ELT</span>
+              <span><i class="ri-checkbox-circle-line" aria-hidden="true"></i> Data Quality</span>
+            </div>
+            <div class="v-card__actions">
+              <span class="v-card__link"><i class="ri-file-info-line" aria-hidden="true"></i> Project Details</span>
+              <a href="https://github.com/maryem37/Data_WareHouse_Project" target="_blank" rel="noopener noreferrer" class="v-card__link" onclick="event.stopPropagation()">
+                <i class="ri-github-line" aria-hidden="true"></i> Repository
               </a>
             </div>
           </div>
@@ -4611,6 +4634,28 @@
         ],
         repo: "https://github.com/kammounimen/FogWatch",
         report: ""
+      },
+      {
+        t: "Enterprise Data Warehouse",
+        win: "⚡ Medallion Architecture & Star Schema",
+        sub: "SQL Server Data Warehouse and Analytics",
+        d: "An end-to-end data warehousing project that integrates ERP and CRM CSV sources into a SQL Server platform. The pipeline loads raw data into a Bronze layer, cleans and standardizes it in Silver, and exposes a Gold star schema for customer, product, and sales analytics.",
+        metrics: [
+          { val: "3 layers", lbl: "Architecture", sub: "Bronze, Silver, and Gold" },
+          { val: "ERP + CRM", lbl: "Sources", sub: "Integrated source systems" },
+          { val: "Star schema", lbl: "Data model", sub: "Dimensions and fact sales" },
+          { val: "SQL Server", lbl: "Platform", sub: "Stored procedures and analytical views" }
+        ],
+        archTitle: "Bronze-to-Gold Data Pipeline",
+        archDesc: "The warehouse follows a Medallion Architecture to progressively improve data quality and provide analytics-ready business views:",
+        agents: [
+          { name: "Bronze", role: "Loads ERP and CRM CSV files as raw source-aligned tables using full-load ingestion." },
+          { name: "Silver", role: "Cleans, standardizes, deduplicates, validates dates and measures, and aligns keys across source systems." },
+          { name: "Gold", role: "Builds customer and product dimensions plus a sales fact view in a star schema for analytics." },
+          { name: "Quality checks", role: "Checks missing values, duplicates, invalid dates, referential integrity, and inconsistent sales calculations." }
+        ],
+        repo: "https://github.com/maryem37/Data_WareHouse_Project",
+        report: ""
       }
     ];
 
@@ -5133,7 +5178,7 @@
         "journey.bacTitle": "Mathematics Baccalaureate &middot; Lycée Sadiki (Tunis)",
         "journey.bacDesc": "Mathematics track at Lycée Sadiki, Tunis.",
         "journey.bacTrack": "Mathematics",
-        "sec.workLabel": "9+ Featured Engineering Projects",
+        "sec.workLabel": "10+ Featured Engineering Projects",
         "sec.workTitle": "FEATURED PROJECTS",
         "sec.workSub": "Selected projects in multi-agent AI, RAG, cloud systems, and machine learning.",
         "projects.showMore": "View all",
@@ -5228,7 +5273,7 @@
         "journey.bacTitle": "Baccalauréat en mathématiques &middot; Lycée Sadiki (Tunis)",
         "journey.bacDesc": "Section mathématiques au lycée Sadiki, à Tunis.",
         "journey.bacTrack": "Mathématiques",
-        "sec.workLabel": "9+ Projets d'Ingénierie",
+        "sec.workLabel": "10+ Projets d’Ingénierie",
         "sec.workTitle": "PROJETS EN VEDETTE",
         "sec.workSub": "Une sélection de projets en IA multi-agents, RAG, cloud et apprentissage automatique.",
         "projects.showMore": "Voir plus",
@@ -5313,7 +5358,7 @@
       ".project-filter-btn[data-project-filter='cybersecurity']": "Cybersécurité",
       "#project-catalog .v-cat-pill": [
         "Agriculture · IA multi-agents", "IA · Automatisation QA", "MCP & IA agentique", "Cloud sans serveur", "Flux distribués", "Pipeline ML", "RAG privé",
-        "Informatique décisionnelle", "Cybersécurité", "Sécurité Ethereum", "Automatisation QA"
+        "Informatique décisionnelle", "Cybersécurité", "Data Engineering · Business Intelligence", "Sécurité Ethereum", "Automatisation QA"
       ],
       "#project-catalog .v-card__title": [
         "AgriGuide — Plateforme agricole d’aide à la décision multi-agents",
@@ -5325,6 +5370,7 @@
         "Assistant de connaissances IA (RAG privé)",
         "PerfPulse : agent d’analyse des indicateurs KPI",
         "FogWatch : détection collaborative des attaques",
+        "Entrepôt de données d’entreprise & analytique",
         "EVA-Guard",
         "Pipeline QA complet piloté par IA"
       ],
@@ -5338,13 +5384,14 @@
         "Assistant conversationnel privé pour interroger des PDF complexes, avec recherche ChromaDB, inférence locale via Ollama et recherche Web en option.",
         "En cours de développement : un agent IA surveille les KPI, signale les variations importantes, identifie les produits ou régions concernés et prépare une synthèse pour Power BI.",
         "Système distribué de détection d’intrusions avec Suricata sur trois sites, reliés par Tailscale et déployés avec K3s, avec une réponse réseau via nftables.",
+        "Entrepôt SQL Server de bout en bout intégrant des données ERP et CRM via les couches Bronze, Silver et Gold, un schéma en étoile, des contrôles qualité et des vues prêtes pour l’analyse.",
         "Prototype de recherche pour surveiller les nœuds Ethereum : le machine learning détecte les anomalies, puis des agents LLM + RAG interprètent les alertes et corrèlent des preuves multi-sources.",
         "Chaîne de bout en bout : exigences → cas de test → export vers un outil de gestion → tests automatisés → intégration continue → rapport de synthèse. Le projet met l’accent sur l’orchestration et la reproductibilité."
       ],
       "#project-catalog .v-card__actions .v-card__link": [
         "Détails du projet et démo", "Dépôt GitHub", "Détails du projet et démo", "Dépôt GitHub"
       ],
-      "#project-catalog .v-brand-pill": ["Talan & ENIS", "VORTEX · LangGraph", "FastMCP", "Stack AWS", "Apache Kafka", "XGBoost & Flask", "FastAPI & Ollama", "IDS distribués"],
+      "#project-catalog .v-brand-pill": ["Talan & ENIS", "VORTEX · LangGraph", "FastMCP", "Stack AWS", "Apache Kafka", "XGBoost & Flask", "FastAPI & Ollama", "IDS distribués", "SQL Server · Medallion"],
       "#project-catalog .project-status-badge": ["En cours", "En cours", "En cours"],
       "#project-catalog .v-card__actions .v-card__link:nth-child(1)": [
         "Détails du projet et démo", "Détails du projet et démo", "Détails et métriques", "Détails et métriques",
@@ -5677,7 +5724,7 @@
     const projectIconNames = [
       "ri-seedling-line", "ri-robot-2-line", "ri-user-search-line", "ri-truck-line",
       "ri-broadcast-line", "ri-line-chart-line", "ri-book-open-line", "ri-pulse-line",
-      "ri-shield-check-line", "ri-shield-keyhole-line", "ri-checkbox-multiple-line"
+      "ri-shield-check-line", "ri-database-2-line", "ri-checkbox-multiple-line"
     ];
     document.querySelectorAll("#project-catalog .v-card").forEach((card, index) => {
       const title = card.querySelector(".v-card__title");
@@ -5729,6 +5776,11 @@
       "business intelligence": LOCAL("ml"),
       "kpi monitoring": LOCAL("stream"),
       "power bi": SI("powerbi", "F2C811"),
+      "sql server": SI("microsoftsqlserver", "CC2927"),
+      "medallion architecture": LOCAL("cloud"),
+      "star schema": LOCAL("powerbi"),
+      "etl / elt": LOCAL("stream"),
+      "data quality": LOCAL("junit"),
       "k3s": SI("k3s", "FFC61C"),
       "tailscale": SI("tailscale", "242424"),
       "gitlab ci": SI("gitlab", "FC6D26"),
