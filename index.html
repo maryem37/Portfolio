@@ -189,7 +189,8 @@
     [data-theme="light"] .lang-pill { background: rgba(20, 38, 62, .06); }
     [data-theme="light"] .nav__link.active-link { color: #2563eb; }
     [data-theme="light"] .wa-input::placeholder { color: #7b8ba0; }
-    [data-theme="light"] .header, [data-theme="light"] .header.scroll-header { background: rgba(248, 250, 255, 0.9); }
+    [data-theme="light"] .header { background: transparent; }
+    [data-theme="light"] .header.scroll-header { background: transparent; }
     [data-theme="light"] .fixed-footer-tag { color: rgba(20, 35, 56, 0.42); }
     [data-theme="light"] .hero-chip { background: rgba(255,255,255,.92); }
     [data-theme="light"] .wa-input { background: #f7f9fc; color: var(--text-primary); }
@@ -372,21 +373,29 @@
       left: 0;
       width: 100%;
       z-index: 1000;
-      background: rgba(8, 8, 11, 0.65);
-      backdrop-filter: blur(22px) saturate(150%);
-      -webkit-backdrop-filter: blur(22px) saturate(150%);
-      border-bottom: 1px solid var(--border-subtle);
-      transition: background var(--dur-3) var(--ease-smooth), border-color var(--dur-3) var(--ease-smooth);
+      background: transparent;
+      border-bottom: 0;
+      pointer-events: none;
+      transition: background var(--dur-3) var(--ease-smooth);
     }
 
     .header.scroll-header {
-      background: rgba(8, 8, 11, 0.90);
-      border-bottom-color: var(--border-light);
-      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.03), 0 12px 40px -18px rgba(0, 0, 0, 0.9);
+      background: transparent;
     }
 
     .nav {
-      height: var(--header-height);
+      height: calc(var(--header-height) - 0.25rem);
+      max-width: 1240px;
+      width: calc(100% - 2 * var(--gutter));
+      margin: 0.75rem auto 0;
+      padding-inline: 1.25rem;
+      border: 1px solid var(--border-light);
+      border-radius: var(--r-full);
+      background: color-mix(in srgb, var(--bg-surface) 62%, transparent);
+      backdrop-filter: blur(18px) saturate(150%);
+      -webkit-backdrop-filter: blur(18px) saturate(150%);
+      box-shadow: 0 12px 32px -22px rgba(20, 38, 62, 0.42);
+      pointer-events: auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -534,7 +543,7 @@
         width: 100%;
         max-height: 100vh;
         overflow-y: auto;
-        background: radial-gradient(120% 90% at 50% 0%, rgba(59, 130, 246, 0.12) 0%, transparent 62%), #0A0A0D;
+        background: radial-gradient(120% 90% at 50% 0%, rgba(59, 130, 246, 0.12) 0%, transparent 62%), var(--bg-surface);
         border-bottom: 1px solid var(--border-light);
         border-radius: 0 0 var(--r-xl) var(--r-xl);
         padding: calc(var(--header-height) + 1.5rem) var(--gutter) 2.25rem;
@@ -574,6 +583,10 @@
       }
 
       .nav__toggle { display: flex; }
+
+      .nav {
+        padding-inline: 1rem;
+      }
     }
 
     /* ==================== BUTTONS ==================== */
@@ -3101,11 +3114,6 @@
             <span class="achievement-glance__value" data-count="3" data-suffix="">0</span>
             <span class="achievement-glance__label" data-i18n="stats.awards">Awards</span>
           </div>
-          <div class="achievement-glance__item">
-            <i class="achievement-glance__icon ri-linkedin-box-line" aria-hidden="true"></i>
-            <span class="achievement-glance__value" data-count="1857" data-format="grouped" data-suffix="">0</span>
-            <span class="achievement-glance__label" data-i18n="stats.followers">LinkedIn followers</span>
-          </div>
         </div>
 
         <div class="section-title-wrap">
@@ -5193,7 +5201,6 @@
         "stats.certifications": "Licenses & certifications",
         "stats.internships": "Internships",
         "stats.awards": "Awards",
-        "stats.followers": "LinkedIn followers",
         "sec.skillsSub": "Bridging autonomous multi-agent systems, quantitative RAG pipelines, and distributed event microservices",
         "skills.languagesCat": "05 / Languages",
         "skills.languagesTitle": "Languages & Frameworks",
@@ -5288,7 +5295,6 @@
         "stats.certifications": "Licences et certifications",
         "stats.internships": "Stages",
         "stats.awards": "Distinctions",
-        "stats.followers": "Abonnés LinkedIn",
         "sec.skillsSub": "Conception de systèmes multi-agents autonomes, pipelines RAG quantitatifs et microservices distribués",
         "skills.languagesCat": "05 / Langages",
         "skills.languagesTitle": "Langages & Frameworks",
