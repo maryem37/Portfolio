@@ -1,5 +1,7 @@
 videos/*
 !videos/vortex-demo.mp4
 !videos/le-final.mp4
+!videos/PerfPulse.mp4
+!videos/qa-test-demo.mp4
 /index copy.html
 /index copy_fixed.html
