@@ -3669,21 +3669,25 @@
           </div>
 
           <!-- Project in progress: AI-Driven QA Pipeline -->
-          <div class="v-card" data-project-domains="ai qa devops">
+          <div class="v-card" data-project-domains="ai qa devops" onclick="openProjectModal(10)">
             <div class="v-card__top">
               <span class="v-cat-pill">QA Automation</span>
               <span class="project-status-badge">In progress</span>
             </div>
             <h4 class="v-card__title">Pipeline QA complet piloté par IA</h4>
-            <p class="v-card__sub">Chaîne de bout en bout : exigences → cas de test → export vers un outil de gestion → tests automatisés → exécution en intégration continue → rapport de synthèse. Le projet met l’accent sur l’orchestration des étapes et la reproductibilité.</p>
+            <p class="v-card__sub">Pipeline QA de bout en bout appliqué à une plateforme de réservation : un LLM génère les cas de test et les tests API/UI Playwright, avec revue humaine, export Jira/Xray, exécution GitHub Actions et rapport de synthèse.</p>
             <div class="v-card__tags">
-              <span><i class="ri-git-branch-line" aria-hidden="true"></i> GitLab CI</span>
+              <span><i class="ri-robot-2-line" aria-hidden="true"></i> LLM</span>
+              <span><i class="ri-play-circle-line" aria-hidden="true"></i> Pytest</span>
+              <span><i class="ri-window-line" aria-hidden="true"></i> Playwright</span>
               <span><i class="ri-github-line" aria-hidden="true"></i> GitHub Actions</span>
-              <span><i class="ri-settings-3-line" aria-hidden="true"></i> Jenkins</span>
-              <span><i class="ri-checkbox-multiple-line" aria-hidden="true"></i> Test management</span>
+              <span><i class="ri-checkbox-multiple-line" aria-hidden="true"></i> Jira / Xray</span>
             </div>
             <div class="v-card__actions">
-              <a href="https://github.com/kammounimen/QAPilot-AI" target="_blank" rel="noopener noreferrer" class="v-card__link" onclick="event.stopPropagation()">
+              <span class="v-card__link">
+                <i class="ri-video-line" aria-hidden="true"></i> Project Details &amp; Demo
+              </span>
+              <a href="https://github.com/maryem37/QA-TEST" target="_blank" rel="noopener noreferrer" class="v-card__link" onclick="event.stopPropagation()">
                 <i class="ri-github-line" aria-hidden="true"></i> Repository
               </a>
             </div>
@@ -4703,6 +4707,31 @@
         ],
         repo: "https://github.com/maryem37/Data_WareHouse_Project",
         report: ""
+      },
+      {
+        t: "Pipeline QA complet piloté par IA",
+        sub: "End-to-End AI-Assisted Software Testing Pipeline",
+        d: "A complete QA pipeline applied to a multi-service room-booking platform. A language model generates test cases from manually written requirements and produces API and Playwright UI tests. Human review, Jira/Xray export, GitHub Actions execution, and a reproducible summary report complete the workflow.",
+        status: "In progress",
+        metrics: [
+          { val: "12", lbl: "Requirements", sub: "Manually written acceptance expectations" },
+          { val: "34", lbl: "Test cases", sub: "Generated and human-reviewed" },
+          { val: "19", lbl: "Automated tests", sub: "15 API and 4 UI Playwright tests" },
+          { val: "27", lbl: "Passing tests", sub: "0 unexpected failures in the reference run" }
+        ],
+        archTitle: "AI-Assisted QA Workflow",
+        archDesc: "Requirements are transformed into reviewed test cases and executable tests, then exported, executed in CI, and summarized with deterministic metrics.",
+        agents: [
+          { name: "Requirements", role: "Defines expected behavior manually instead of copying observed defects." },
+          { name: "LLM generation", role: "Produces structured test cases and API/UI test code with validation and bounded repair." },
+          { name: "Human review", role: "Reviews generated cases, tests, and tickets; corrections are tracked in the repository." },
+          { name: "Jira / Xray", role: "Exports requirements and test cases, with a FileBackend fallback for local runs." },
+          { name: "CI and reporting", role: "Runs API and Playwright tests in GitHub Actions and generates a Markdown/JUnit summary." }
+        ],
+        video: "videos/Pipeline QA complet piloté par IA.mp4",
+        videoLabel: "Pipeline QA complet piloté par IA — Project Demo",
+        repo: "https://github.com/maryem37/QA-TEST",
+        report: ""
       }
     ];
 
@@ -5432,7 +5461,7 @@
         "Système distribué de détection d’intrusions avec Suricata sur trois sites, reliés par Tailscale et déployés avec K3s, avec une réponse réseau via nftables.",
         "Entrepôt SQL Server de bout en bout intégrant des données ERP et CRM via les couches Bronze, Silver et Gold, un schéma en étoile, des contrôles qualité et des vues prêtes pour l’analyse.",
         "Prototype de recherche pour surveiller les nœuds Ethereum : le machine learning détecte les anomalies, puis des agents LLM + RAG interprètent les alertes et corrèlent des preuves multi-sources.",
-        "Chaîne de bout en bout : exigences → cas de test → export vers un outil de gestion → tests automatisés → intégration continue → rapport de synthèse. Le projet met l’accent sur l’orchestration et la reproductibilité.",
+        "Pipeline QA de bout en bout appliqué à une plateforme de réservation : un LLM génère les cas de test et les tests API/UI Playwright, avec revue humaine, export Jira/Xray, exécution GitHub Actions et rapport de synthèse.",
         "Système multi-agents d’analyse de données qui route les demandes en langage naturel vers des agents SQL et ETL spécialisés, puis évalue la réponse finale avec un juge IA."
       ],
       "#project-catalog .v-card__actions .v-card__link": [
