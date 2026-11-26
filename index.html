@@ -1756,6 +1756,12 @@
       object-fit: contain;
     }
 
+    .v-card--compact { padding: 1.2rem; }
+    .v-card--compact .v-card__top { margin-bottom: 0.6rem; }
+    .v-card--compact .v-card__project-icon { margin: 0.1rem 0 0.45rem; }
+    .v-card--compact .v-card__tags { gap: 0.4rem; margin-bottom: 0.65rem; }
+    .v-card--compact .v-card__tags span { width: 2.6rem; height: 2.6rem; }
+
     [data-theme="light"] .v-card__tags span { background: #eee9f8; }
 
     .crown-techs { margin: 0 0 1.25rem; }
@@ -3712,7 +3718,7 @@
           </div>
 
           <!-- Project: Carve-out Copilot -->
-          <div class="v-card" data-project-domains="ai data devops" onclick="openProjectModal(11)">
+          <div class="v-card v-card--compact" data-project-domains="ai data devops" onclick="openProjectModal(11)">
             <div class="v-card__top">
               <span class="v-cat-pill">Enterprise IT · Decision Intelligence</span>
               <span class="v-brand-pill">Carve-out Copilot</span>
