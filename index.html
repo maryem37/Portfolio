@@ -3711,6 +3711,30 @@
             </div>
           </div>
 
+          <!-- Project: Carve-out Copilot -->
+          <div class="v-card" data-project-domains="ai data devops" onclick="openProjectModal(11)">
+            <div class="v-card__top">
+              <span class="v-cat-pill">Enterprise IT · Decision Intelligence</span>
+              <span class="v-brand-pill">Carve-out Copilot</span>
+            </div>
+            <h4 class="v-card__title">Carve-out Copilot — IT Separation Planning Platform</h4>
+            <p class="v-card__sub">Plans enterprise IT carve-outs with dependency-aware migration waves, OR-Tools cost optimization, and a LangGraph workflow for risk analysis and human-approved decisions.</p>
+            <div class="v-card__tags" aria-label="Technologies">
+              <span><i class="ri-node-tree" aria-hidden="true"></i> NetworkX</span>
+              <span><i class="ri-function-line" aria-hidden="true"></i> OR-Tools CP-SAT</span>
+              <span><i class="ri-node-tree" aria-hidden="true"></i> LangGraph</span>
+              <span><i class="ri-flashlight-line" aria-hidden="true"></i> FastAPI</span>
+              <span><i class="ri-database-2-line" aria-hidden="true"></i> SQLite</span>
+              <span><i class="ri-ship-line" aria-hidden="true"></i> Docker</span>
+            </div>
+            <div class="v-card__actions">
+              <span class="v-card__link"><i class="ri-file-info-line" aria-hidden="true"></i> Project Details</span>
+              <a href="https://github.com/maryem37/splitwise-it" target="_blank" rel="noopener noreferrer" class="v-card__link" onclick="event.stopPropagation()">
+                <i class="ri-github-line" aria-hidden="true"></i> Repository
+              </a>
+            </div>
+          </div>
+
         </div>
 
         <div class="projects-show-more-wrap">
@@ -4729,6 +4753,27 @@
         video: "videos/qa-test-demo.mp4",
         videoLabel: "Pipeline QA complet piloté par IA — Project Demo",
         repo: "https://github.com/maryem37/QA-TEST",
+        report: ""
+      },
+      {
+        t: "Carve-out Copilot",
+        sub: "Enterprise IT Separation & Decision Intelligence Platform",
+        d: "A platform for planning enterprise IT carve-outs. It builds a dependency-aware migration baseline for 30 IT assets, detects cycles and schedule conflicts, and uses OR-Tools CP-SAT to optimize migration waves and reduce estimated TSA exposure by $290,000. A LangGraph workflow supports risk analysis and human-approved decisions, while deterministic planning remains the source of truth.",
+        metrics: [
+          { val: "30", lbl: "IT assets", sub: "Dependency-aware separation portfolio" },
+          { val: "6 → 5", lbl: "Migration waves", sub: "Baseline compared with optimized plan" },
+          { val: "$290k", lbl: "TSA savings", sub: "Estimated reduction from optimization" },
+          { val: "7", lbl: "Specialized agents", sub: "LangGraph decision workflow" }
+        ],
+        archTitle: "Dependency-Aware Separation Workflow",
+        archDesc: "The deterministic planning engine analyzes dependencies and sequences migration waves. OR-Tools CP-SAT optimizes the schedule, while LangGraph agents investigate risks and scenarios and can pause for human approval through the FastAPI platform.",
+        agents: [
+          { name: "NetworkX planning", role: "Builds the dependency graph, detects cycles, and sequences migration waves." },
+          { name: "OR-Tools CP-SAT", role: "Optimizes wave assignments against dependency and capacity constraints." },
+          { name: "LangGraph agents", role: "Investigate dependencies, strategy, risks, and optimization, then evaluate findings and request human review when needed." },
+          { name: "FastAPI platform", role: "Provides the unified web interface, REST API, and decision reports." }
+        ],
+        repo: "https://github.com/maryem37/splitwise-it",
         report: ""
       }
     ];
